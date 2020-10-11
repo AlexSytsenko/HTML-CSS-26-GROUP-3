@@ -1,0 +1,14 @@
+.logo {
+    text-decoration: none;
+    color: tomato;
+    font-size: 25px;
+    text-transform
+}
+
+.flexbox {
+    display: flex;
+}
+
+.navigation__contact + .navigation__contact {
+    margin-left: 25px;
+}
