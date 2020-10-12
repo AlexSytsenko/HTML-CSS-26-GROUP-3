@@ -1,0 +1,108 @@
+* {
+  user-select: none;
+}
+
+// Пока что не имеет значения
+// html {
+// 	@include breakpoint(desktop) {
+// 		margin-left: calc(100vw - 100%);
+// 	}
+// }
+
+// Стандарт для рисунков
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Отключаем ресайз комментов
+textarea {
+  resize: none;
+}
+
+// Убираем подчеркивания ссылкам
+a {
+  text-decoration: none;
+}
+
+// Отключаем точки и отступы спискам
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+// Отключаем отступы абзацам и заголовкам
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+// Шрифты для основного контента
+.body {
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+// Шрифты для Заголовков
+.title {
+  font-family: 'Titan One', cursive;
+}
+
+.first-title {
+  font-family: 'Titan One', cursive;
+  font-size: 26px;
+  line-height: 1.15;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $sub-title;
+}
+
+.second-title {
+  font-family: 'Titan One', cursive;
+  font-size: 48px;
+  line-height: 1.15;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $main;
+}
+
+/* SPECIAL CONTAINERS */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  width: 320px;
+
+  @include breakpoint(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 35px;
+    width: 768px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 115px;
+    width: 1280px;
+    //   outline: 2px solid tomato;
+  }
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
