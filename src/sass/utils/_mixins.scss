@@ -1,0 +1,65 @@
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == hero-desktop-2x {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else if $point == until-desktop {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == tablet-to-desktop {
+    @media (min-width: 768px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == hero-tablet-2x {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else if $point == until-tablet {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == mobile-to-tablet {
+    @media (min-width: 320px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (min-width: 320px) {
+      @content;
+    }
+  } @else if $point == hero-mobile-2x {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else if $point == mobile-only {
+    @media (max-width: 479px) {
+      @content;
+    }
+  }
+}
+
+@mixin flexbox(
+  $display: flex,
+  $content: center,
+  $items: center,
+  $wrap: nowrap
+) {
+  display: $display;
+  justify-content: $content;
+  align-items: $items;
+  flex-wrap: $wrap;
+}

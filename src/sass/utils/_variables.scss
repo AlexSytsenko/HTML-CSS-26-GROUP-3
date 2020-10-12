@@ -1,0 +1,39 @@
+// titles color, h2 {sub-title}, h3 {main}
+$main: #d41443;
+$sub-title: #ffa5ba;
+
+// content text color for each card and text blocks
+$primary: #000000;
+$secondary: #907e82;
+
+// inverted color for text, titles, buttons, sections
+$polar: #ffffff;
+
+// header and section background colors
+$hero-bg: #ffb8ca;
+$section-bg: #fff5f6;
+
+// section 1 cards background
+$ice-cream: #ffb8ca;
+$ice-coffee: #f0d1a5;
+$milk-shake: #c2e297;
+
+// slider content background
+$slider: #fafafa;
+$underline: #e1e1e1;
+
+// section 5 locations index titles background color
+$cafe: #f0d1a5;
+$truck: #c2e297;
+$time: #ffa5ba;
+
+// buttons (products and our locations), (buy now, read more, franchise and etc)
+// Используем #d41443 вместо #D41342, явная ошибка дизайнера
+$btn1-prod-loc: #d41443;
+$btn2-franchise: #ffffff;
+
+$btn1-hover: #c7133e;
+$btn2-hover: #ecebeb;
+
+// footer icons background
+$social: #fea5bb;
