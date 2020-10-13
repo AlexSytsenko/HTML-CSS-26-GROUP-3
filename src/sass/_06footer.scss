@@ -1,0 +1,190 @@
+.footer {
+  background-color: $section-bg;
+}
+
+.footer__container {
+  border-bottom: 1px solid gray;
+  margin: 0 auto;
+  padding-top: 43px;
+  padding-bottom: 43px;
+  width: 100%;
+
+  text-align: right;
+}
+
+.footer__first-title {
+  margin-bottom: 17px;
+
+  max-width: 234px;
+
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.footer__second-title {
+  margin-bottom: 43px;
+
+  max-width: 234px;
+
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.list-footer {
+  @include flexbox($jc: flex-end, $ai: stretch, $w: wrap);
+  max-width: 230px;
+  //   margin-bottom: 46px;
+  margin-left: auto;
+}
+
+.list-footer__item {
+  &:not(:last-child) {
+    margin-right: 28px;
+    margin-bottom: 46px;
+  }
+}
+
+.list-footer__link {
+  display: block;
+  content: '';
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $social;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .list-footer__item:hover &,
+  .list-footer__item:focus & {
+    background-color: $main;
+  }
+}
+
+$numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
+
+@each $iconNumber, $iconName in $numbers {
+  .list-footer__item:nth-child(#{$iconNumber}) .list-footer__link {
+    background-image: url(../images/svg_in_sprite/#{$iconName}.svg);
+  }
+}
+
+.footer__contact {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
+
+  color: $primary;
+  text-align: right;
+}
+
+.footer__contact span {
+  color: $main;
+}
+
+.footer__copyright {
+  max-width: 150px;
+  padding: 22px 0;
+  letter-spacing: 0.02em;
+}
+
+.copyright {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+
+  text-align: center;
+
+  color: $secondary;
+}
+
+@include breakpoint(tablet) {
+  .footer__container {
+    display: flex;
+    align-items: flex-start;
+  }
+  .footer__first-title {
+    max-width: 340px;
+
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
+  .footer__second-title {
+    max-width: 340px;
+    margin-bottom: 0;
+
+    font-size: 48px;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+  }
+
+  .list-footer {
+    max-width: 319px;
+  }
+
+  .list-footer__link {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer__contact {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.86;
+
+    letter-spacing: 0.02em;
+  }
+
+  .footer__copyright {
+    max-width: 100%;
+  }
+
+  .copyright {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.86;
+  }
+}
+
+@include breakpoint(desktop) {
+  .footer__container {
+    justify-content: space-around;
+  }
+
+  .footer__first-title {
+    max-width: 100%;
+    font-size: 30px;
+    line-height: 1.13;
+  }
+  .footer__second-title {
+    max-width: 100%;
+
+    font-size: 58px;
+    line-height: 1.14;
+  }
+
+  .footer__contact {
+    font-size: 16px;
+  }
+
+  .list-footer__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .footer__copyright {
+    padding: 10px 0;
+  }
+}
