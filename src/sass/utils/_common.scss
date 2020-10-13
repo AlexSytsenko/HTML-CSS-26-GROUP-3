@@ -57,24 +57,47 @@ h5 {
 
 .first-title {
   font-family: 'Titan One', cursive;
-  font-size: 26px;
-  line-height: 1.15;
+  font-size: 18px;
+  line-height: 1.17;
 
   text-align: center;
   text-transform: uppercase;
 
   color: $sub-title;
+
+  @include breakpoint(tablet) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 
 .second-title {
   font-family: 'Titan One', cursive;
-  font-size: 48px;
+  font-size: 34px;
   line-height: 1.15;
+
+  letter-spacing: 0.04em;
 
   text-align: center;
   text-transform: uppercase;
 
   color: $main;
+
+  @include breakpoint(tablet) {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
 }
 
 /* SPECIAL CONTAINERS */
