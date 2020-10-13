@@ -1,0 +1,219 @@
+.relative {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint(tablet) {
+    padding: 37px 34px 0 34px;
+  }
+  @include breakpoint(until-desktop) {
+    min-width: 100vw;
+  }
+  @include breakpoint(desktop) {
+    justify-content: start;
+    width: 1200px;
+    padding: 46px 37px 0 37px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.logo {
+  margin-right: 60px;
+  @include breakpoint(desktop) {
+    margin-right: 110px;
+  }
+}
+
+.header__button--cross {
+  fill: $polar;
+}
+
+.header__button--menu {
+  fill: $main;
+}
+
+.header__button {
+  position: relative;
+  display: inline-flex;
+  padding: 0;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 20;
+  outline: 1px solid black;
+  &.is-open {
+    position: absolute;
+    top: 20px;
+    right: 31px;
+  }
+
+  &.is-open &--cross {
+    display: block;
+  }
+
+  &.is-open &--menu {
+    display: none;
+  }
+
+  &--cross {
+    display: none;
+    fill: $polar;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &--menu {
+    fill: $main;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover &--cross,
+  &:focus &--cross,
+  &:active &--cross {
+    border: 1px solid $btn2-hover;
+    border-radius: 100%;
+    background-color: $polar;
+    fill: $main;
+  }
+
+  &:hover &--menu,
+  &:focus &--menu,
+  &:active &--menu {
+    border-radius: 100%;
+
+    fill: $btn2-hover;
+  }
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.header__burger {
+  @include breakpoint(until-desktop) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    width: 250px;
+    height: 502px;
+    padding-top: 60px;
+    text-align: center;
+    background-color: $menu-bg;
+    filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.is-open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @include breakpoint(tablet-to-desktop) {
+      width: 254px;
+    }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+}
+
+.burger__btn {
+  &--tab {
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  @include breakpoint(until-desktop) {
+    margin-bottom: 19px;
+  }
+
+  &--desk {
+    @include breakpoint(until-tablet) {
+      display: none;
+    }
+
+    @include breakpoint(tablet) {
+      margin-left: 30px;
+    }
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $main;
+  }
+  &:hover .btn-icon,
+  &:focus .btn-icon,
+  &:active .btn-icon {
+    fill: $polar;
+  }
+}
+
+.btn {
+  font: normal 700 16px/1.3 'DM Sans', sans-serif;
+  padding: 13px 48px;
+  color: $main;
+  background-color: $polar;
+  border-radius: 22px;
+  border: 1px solid transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.navigation {
+  &__list {
+    @include breakpoint(desktop) {
+      margin-right: 110px;
+    }
+  }
+
+  &__item {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include breakpoint(until-desktop) {
+      width: 100%;
+      border: 1px solid $menu-border;
+      margin-left: 0px;
+    }
+
+    @include breakpoint(desktop) {
+      & + & {
+        margin-left: 35px;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    font: normal 700 14px/1.3 'DM Sans', sans-serif;
+    color: $polar;
+    padding: 12px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include breakpoint(until-desktop) {
+      text-align: left;
+      padding-left: 12px;
+    }
+    &--current {
+      color: $main;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $main;
+    }
+  }
+}
