@@ -56,7 +56,7 @@
   display: $d;
   justify-content: $jc;
   align-items: $ai;
-  flex-wrap: $ww;
+  flex-wrap: $w;
 }
 
 @mixin font($fs, $lh, $fw: 500) {
