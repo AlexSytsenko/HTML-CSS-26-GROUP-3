@@ -1,0 +1,75 @@
+.development {
+    background-color: $section-bg;
+    text-align: center;
+    // background-image: url('../images/mobile/section2/milkbg.png');
+    // background-repeat: no-repeat;
+}
+
+.development__container {
+  margin: 0 auto;
+  padding-top: 125px;
+  padding-bottom: 39px;
+  width: 100%;
+}
+
+.development__title {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.development__subtitle {
+    margin-bottom: 26px;
+    font-size: 34px;
+}
+
+.development__image {
+  width: 280px;
+  height: 279px;
+  margin-bottom: 46px;
+}
+
+.development__text {
+  margin-bottom: 40px;
+  font-family: DM Sans;
+  color: $primary;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  text-align: left;
+}
+
+.development__text--part-one {
+  color: $secondary;
+  margin-bottom: 20px;
+}
+
+.development__text--part-two {
+  color: $secondary;
+  margin-bottom: 26px;
+}
+
+.button {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: inline-flex;
+  min-width: 176px;
+  min-height: 44px;
+
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+
+  color: $btn1-prod-loc; 
+  background-color: $polar;
+  border-radius: 22px;
+  border: 0 solid transparent;
+  cursor: pointer;
+}
+
+.button::after {
+  content: '\003E';
+  margin-left: 14px;
+  color: $btn1-prod-loc;
+}
