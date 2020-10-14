@@ -16,12 +16,12 @@
 }
 
 .slider-one__box {
+  position: relative;
   margin-bottom: 30px;
   padding: 43px 66px 26px 57px;
-
   text-align: center;
-
   background-color: $slider;
+  z-index: -1;
 }
 
 .slider-one__text {
@@ -45,6 +45,33 @@
   background-image: url('../images/svg_in_sprite/quotes.svg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.slider-one__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 71px 50px 20px;
+}
+
+.slider-one__gradient {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  background-image: linear-gradient(
+    180deg,
+    #e1e1e1 1.61%,
+    #fafafa 1.61%,
+    #fafafa 50%,
+    #e1e1e1 50%,
+    #e1e1e1 51.61%,
+    #fafafa 51.61%,
+    #fafafa 100%
+  );
+  background-size: 62px 60px;
 }
 
 .slider-two__card {
@@ -130,6 +157,9 @@
   .slider-one__text::before {
     transform: translate(-40px, -17px);
   }
+  .slider-one__inner {
+    padding: 76px 36px 28px 60px;
+  }
 
   .slider-two__dots-list {
     margin-bottom: 14px;
@@ -176,6 +206,10 @@
 
   .slider-one__text::before {
     transform: translate(-37px, -15px);
+  }
+
+  .slider-one__inner {
+    padding: 76px 36px 28px 60px;
   }
 
   .slider-two__info {
