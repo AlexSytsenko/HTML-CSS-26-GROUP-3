@@ -1,0 +1,51 @@
+.relative {
+  position: relative;
+}
+
+.massa {
+  background-color: $section-bg;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 115px;
+  padding-right: 115px;
+}
+
+// .description__item {
+// }
+
+.description__item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  width: 270px;
+  background-repeat: no-repeat;
+  background-position: left;
+  border-radius: 4px;
+}
+
+.description__icon:nth-child(1)::before {
+  background-image: url(/images/svg_icon/icon1.svg);
+}
+.description__icon:nth-child(2)::before {
+  background-image: url(/images/svg_icon/icon2.svg);
+}
+.description__icon:nth-child(3)::before {
+  background-image: url(/images/svg_icon/icon3.svg);
+}
+.description__title {
+  font-family: 'Titan One';
+  font-size: 58px;
+  line-height: 66, 41px;
+
+  text-align: left;
+
+  color: $main;
+}
+
+.collage {
+  color: antiquewhite;
+}
