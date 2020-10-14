@@ -1,19 +1,40 @@
 .locations {
   font-family: 'DM Sans', sans-serif;
-  padding-bottom: 113px;
+  padding-bottom: 29px;
+  /*паддинг должен быть 113 - корректировка*/
   background: $section-bg;
 
-  &-wraper {
-    //     position: relative;
+  @include breakpoint(tablet-to-desktop) {
+    /*паддинг должен быть 158 - корректировка*/
+    padding-bottom: 80px;
+  }
+  /*паддинг должен быть 165px - корректировка*/
+  @include breakpoint(desktop) {
+    padding-bottom: 63px;
+  }
 
-    // top: -40px;
+  &-wraper {
+    position: relative;
+
+    top: -84px;
     min-width: 320px;
     margin-right: auto;
     margin-left: auto;
     padding: 0 50px;
+
+    @include breakpoint(tablet-to-desktop) {
+      top: -78px;
+      padding: 0 36px;
+    }
+
+    @include breakpoint(desktop) {
+      top: -102px;
+      padding: 0 115px;
+    }
   }
 }
 
+/*Убрать  после обновления общей страницы*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -26,6 +47,20 @@
 }
 
 .locations {
+  &__list {
+    @include breakpoint(tablet-to-desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 81px;
+    }
+
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 86px;
+    }
+  }
+
   &__item {
     width: 100%;
     padding: 43px 20px;
@@ -35,19 +70,32 @@
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    @include breakpoint(until-tablet) {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &:last-child {
+        margin-bottom: 54px;
+      }
     }
-    &:last-child {
-      margin-bottom: 54px;
+    @include breakpoint(tablet-to-desktop) {
+      width: calc((100% - 20px * 2) / 3);
+      padding: 50px 32px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+    @include breakpoint(desktop) {
+      width: calc((100% - 30px * 2) / 3);
+      padding: 52px 44px 61px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 
-  //   @mixin font($fs, $lh, $fw: 500) {
-  //   font-size: $fs;
-  //   line-height: $lh;
-  //   font-weight: $fw;
-  // }
   &__caption {
     display: inline-block;
     margin-bottom: 25px;
@@ -59,12 +107,21 @@
     text-transform: uppercase;
     border-radius: 4px;
 
-    &--odd {
-      background-size: 80px 16px;
+    @include breakpoint(tablet) {
+      @include font(14px, 1.86);
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(desktop) {
+      @include font(16px, 1.86);
+      margin-bottom: 32px;
+    }
+
+    &--cafe {
       background-color: $cafe;
     }
 
-    &--even {
+    &--truck {
       background-color: $truck;
     }
   }
@@ -73,12 +130,32 @@
     margin-bottom: 10px;
     @include font(12px, 1.86);
     letter-spacing: 0.04em;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 14px;
+      @include font(14px, 1.86);
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: 10px;
+      @include font(16px, 1.86);
+    }
   }
 
   &__text {
     margin-bottom: 25px;
     @include font(12px, 1.5);
     color: $secondary;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 30px;
+      @include font(14px, 1.66);
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: 32px;
+      @include font(16px, 1.83);
+    }
   }
 
   &-schedule {
@@ -87,13 +164,44 @@
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
 
+    @include breakpoint(tablet) {
+      margin-bottom: 30px;
+      padding: 30px 0;
+      @include font(14px, 1.86);
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: 32px;
+      padding: 32px 0;
+      @include font(16px, 1.86);
+    }
+
     &__text {
       @include font(12px, 1.86);
+
+      @include breakpoint(tablet) {
+        @include font(14px, 1.86);
+      }
+
+      @include breakpoint(desktop) {
+        @include font(16px, 1.86);
+      }
     }
 
     &__time {
       @include font(12px, 1.86);
       color: $time;
+
+      @include breakpoint(tablet) {
+        @include font(14px, 1.86);
+      }
+
+      @include breakpoint(desktop) {
+        @include font(16px, 1.86);
+      }
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
 }
@@ -101,5 +209,81 @@
 .address-nav__link {
   @include font(12px, 1.5);
   color: $secondary;
-  text-decoration: normal;
+  font-style: normal;
+
+  @include breakpoint(tablet) {
+      @include font(14px, 1.83);
+    }
+
+    @include breakpoint(desktop) {
+      @include font(16px, 1.83);
+    }
+}
+
+/*Поменять флексы, как подправится флекс миксин*/
+.locations-button-list {
+  @include breakpoint(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.button {
+  /*Поменять флексы, как подправится флекс миксин*/
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  height: 44px;
+  padding: 0 17px;
+
+  @include font(16px, 1.31, 700);
+  letter-spacing: 0.06em;
+  border-radius: 22px;
+  border: transparent;
+  cursor: pointer;
+
+  &-locations {
+    margin-bottom: 10px;
+    background-color: $btn1-prod-loc;
+    color: $polar;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+
+    &__text {
+      margin-right: 4px;
+    }
+
+    &__icon {
+      --color2: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $btn1-hover;
+    }
+  }
+
+  &-franchise {
+    background-color: $polar;
+    color: $main;
+
+    &:hover,
+    &:focus {
+      background-color: $btn2-hover;
+    }
+
+    &__text {
+      margin-right: 4px;
+    }
+  }
 }
