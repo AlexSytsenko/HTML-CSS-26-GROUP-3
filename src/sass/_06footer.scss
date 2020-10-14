@@ -36,6 +36,17 @@
 
   text-align: left;
   text-transform: uppercase;
+
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 30px #d41443;
+  }
+  to {
+    text-shadow: 0 0 30px #ffa5ba, 0 0 10px #e18298;
+  }
 }
 
 .list-footer {
@@ -63,6 +74,8 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  transition: all 150ms linear;
+
   .list-footer__item:hover &,
   .list-footer__item:focus & {
     background-color: $main;
@@ -87,8 +100,15 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
   text-align: right;
 }
 
-.footer__contact span {
+.footer__contact a {
   color: $main;
+
+  transition: color 150ms linear;
+
+  &:hover,
+  &:focus {
+    color: $sub-title;
+  }
 }
 
 .footer__copyright {
