@@ -1,8 +1,10 @@
 .development {
-    background-color: $section-bg;
-    text-align: center;
-    // background-image: url('../images/mobile/section2/milkbg.png');
-    // background-repeat: no-repeat;
+  background-color: $section-bg;
+  text-align: center;
+  background-image: url('../images/mobile/section2/milkbg.png');
+  background-size: 100%;
+  background-position-y: 80%;
+  background-repeat: no-repeat;
 }
 
 .development__container {
@@ -10,48 +12,109 @@
   padding-top: 125px;
   padding-bottom: 39px;
   width: 100%;
+
+  @include breakpoint(tablet-to-desktop) {
+   padding-top: 130px;
+   padding-bottom: 66px;
+  }
 }
 
 .development__title {
-    margin-bottom: 15px;
-    font-size: 18px;
+  margin-bottom: 15px;
+
+  @include breakpoint(tablet-to-desktop) {
+    margin-bottom: 16px;
+  }
 }
 
 .development__subtitle {
-    margin-bottom: 26px;
-    font-size: 34px;
+  margin-bottom: 26px;
+
+  @include breakpoint(tablet-to-desktop) {
+    margin-bottom: 16px;
+
+    @include breakpoint(desktop) {
+    margin-bottom: 55px;
+  }
+  }
 }
 
 .development__image {
+  @include breakpoint(until-tablet) {
   width: 280px;
   height: 279px;
   margin-bottom: 46px;
+   }
+}
+
+.development__flexbox {
+  @include breakpoint(until-tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+    @include breakpoint(tablet) {
+    align-items: center;
+  }
+}
+
+.development__description {
+  display: flex;
+  flex-direction: column;
+@include breakpoint(tablet-to-desktop) {
+  margin-left: 17px;
+}
+
+@include breakpoint(desktop) {
+  margin-left: 74px;
+}
+
 }
 
 .development__text {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   font-family: DM Sans;
   color: $primary;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
   text-align: left;
+
+  @include breakpoint(tablet) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+   @include breakpoint(desktop) {
+    font-size: 16px;
+  }
 }
 
 .development__text--part-one {
   color: $secondary;
   margin-bottom: 20px;
+
+  @include breakpoint(tablet-to-desktop) {
+  margin-bottom: 40px;
+}
 }
 
 .development__text--part-two {
   color: $secondary;
   margin-bottom: 26px;
+
+@include breakpoint(tablet-to-desktop) {
+  margin-bottom: 62px;
 }
 
-.button {
+@include breakpoint(desktop) {
+  margin-bottom: 32px;
+}
+}
+
+.development__button {
   align-items: center;
   justify-content: center;
-  margin: auto;
+  align-self: center;
   display: inline-flex;
   min-width: 176px;
   min-height: 44px;
@@ -61,11 +124,19 @@
   font-size: 14px;
   line-height: 1.28;
 
-  color: $btn1-prod-loc; 
+  color: $btn1-prod-loc;
   background-color: $polar;
   border-radius: 22px;
   border: 0 solid transparent;
   cursor: pointer;
+
+  @include breakpoint(tablet) {
+    align-self: start;
+  }
+
+  &:hover {
+    background-color: $btn2-hover;
+  }
 }
 
 .button::after {
