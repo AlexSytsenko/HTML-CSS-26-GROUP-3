@@ -1,4 +1,147 @@
-.test {
-  //   background-color: tomato;
-  color: tomato;
+.hero__indented {
+  display: flex;
+  background-color: $hero-bg;
+  background-position: 50% 50%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  @include breakpoint(mobile) {
+    // min-width: 320px;
+    height: 502px;
+  }
+
+  @include breakpoint(tablet) {
+    height: 399px;
+  }
+
+  @include breakpoint(desktop) {
+    height: 665px;
+  }
+}
+
+.hero__flex {
+  // @include flexbox;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero__position {
+  display: block;
+  z-index: 1;
+
+  @include breakpoint(mobile) {
+    width: 218px;
+    // margin-top: 193px;
+    padding: 0 20px;
+  }
+
+  @include breakpoint(tablet) {
+    width: 162px;
+    margin-top: 15px;
+    padding: 0 34px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 277px;
+    margin-top: 84px;
+    padding: 0 97px 0 115px;
+  }
+}
+
+.hero__hidden {
+  display: none;
+
+}
+
+.circle {
+  position: absolute;
+  //top: 20%;
+  margin: auto;
+  left: 16%;
+  width: 346px;
+  height: 346px;
+  border-radius: 50%;
+  background-color: $time;
+
+  @include breakpoint(tablet) {
+    bottom: 46px;
+    left: 307px;
+    width: 324px;
+    height: 324px;
+  }
+
+  @include breakpoint(desktop) {
+    bottom: 75px;
+    left: 475px;
+    width: 538px;
+    height: 538px;
+  }
+}
+
+.ice__img {
+  position: absolute;
+  bottom: -22.5%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include breakpoint(tablet) {
+    top: 9.88%;
+    left: 22%;
+    transform: translateX(-60%);
+  }
+
+  @include breakpoint(desktop) {
+    top: 10.41%;
+    left: 22%;
+    transform: translateX(-60%);
+  }
+}
+
+.hero__order-title {
+  //  @include font(26px, 1.15em, 400)
+  color: $polar;
+  font: normal 400 26px/1.15em 'Titan One', cursive;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+
+}
+
+.hero__order-title--accent {
+  font: normal 400 48px/0.905em 'Titan One', cursive;
+  color: $main;
+  margin-bottom: 20px;
+}
+
+.hero__button {
+  font: normal 400 8px/1.25em 'DM Sans', sans-serif;
+  min-width: 62.4px;
+  height: 24px;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  background: $btn1-prod-loc;
+  color: $btn2-franchise;
+  margin-right: 8px;
+  // transition: background-color $time $time-function;
+}
+
+.hero__button--max {
+  @extend .hero__button;
+  min-width: 82.8px;
+  background: $btn2-franchise;
+  color: $btn1-prod-loc;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background: $btn1-hover;
+  color: $btn2-franchise;
+}
+
+.hero__button--max:hover,
+.hero__button--max:focus {
+  background: $btn2-hover;
+  color: $btn1-prod-loc;
 }
