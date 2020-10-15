@@ -1,31 +1,56 @@
-<h1>ТРЕТЬЯ СЕКЦИЯ promo Александро Шивяков</h1>
-<section class="container">
-  <div class="massa">
-    <ul class="description">
-      <li class="description__item description__icon">
-        <h2 class="description__title">721</h2>
-        <p>
+<section class="promo">
+  <div class="promo__container container">
+    <ul class="promo__list">
+      <li class="promo__item promo__icon">
+        <h2 class="promo__title">721</h2>
+        <p class="promo__text">
           Aliquam ac dui vel dui vulputate <br />
           consectetur. Mauris massa.
         </p>
       </li>
-      <li class="description__item description__icon">
-        <h2 class="description__title">16kg</h2>
-        <p>
+      <li class="promo__item promo__icon">
+        <h2 class="promo__title">16kg</h2>
+        <p class="promo__text">
           Aliquam ac dui vel dui vulputate <br />
           consectetur. Mauris massa.
         </p>
       </li>
-      <li class="description__item description__icon">
-        <h2 class="description__title">84</h2>
-        <p>
+      <li class="promo__item promo__icon">
+        <h2 class="promo__title">84</h2>
+        <p class="promo__text">
           Aliquam ac dui vel dui vulputate <br />
           consectetur. Mauris massa.
         </p>
       </li>
     </ul>
   </div>
-  <div class="collage">
-    <img src="/images/desktop/collage.png" alt="collage" />
-  </div>
+
+  <picture>
+    <source
+      srcset="
+        ./images/desktop/collage.png    1x,
+        ./images/desktop/collage@2x.png 2x
+      "
+      media="(min-width: 1200px)"
+    />
+
+    <source
+      srcset="
+        ./images/desktop/collage.png    1x,
+        ./images/desktop/collage@2x.png 2x
+      "
+      media="(min-width: 768px"
+    />
+
+    <source
+      srcset="./images/tablet/collage.png 1x, ./images/tablet/collage@2x.png 2x"
+      media="(max-width: 767px"
+    />
+
+    <img
+      class="promo__collage image"
+      src="./images/mobile/collage.png"
+      alt="collage"
+    />
+  </picture>
 </section>
