@@ -1,8 +1,11 @@
 .locations {
   font-family: 'DM Sans', sans-serif;
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: 29px;
   /*паддинг должен быть 113 - корректировка*/
-  background: $section-bg;
+    background: $section-bg;
+  
 
   @include breakpoint(tablet-to-desktop) {
     /*паддинг должен быть 158 - корректировка*/
@@ -11,6 +14,14 @@
   /*паддинг должен быть 165px - корректировка*/
   @include breakpoint(desktop) {
     padding-bottom: 63px;
+
+    background-position: top;
+    background-repeat: no-repeat;
+    background-image: url(../images/desktop/section5/drops.png);
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/section5/drops@2x.png);
+    }
   }
 }
 
@@ -232,20 +243,18 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  
+
   min-width: 176px;
   min-height: 44px;
 
   @include font(16px, 1.31, 700);
   letter-spacing: 0.06em;
 
-
   color: $btn1-prod-loc;
   background-color: $polar;
   border-radius: 22px;
   border: 0 solid transparent;
   cursor: pointer;
-
 }
 
 .button__location--locations {
@@ -274,42 +283,3 @@
     background-color: $btn2-hover;
   }
 }
-
-// .loc__btn {
-//   align-items: center;
-//   justify-content: center;
-//   margin: auto;
-//   display: inline-flex;
-//   min-width: 176px;
-//   min-height: 44px;
-
-//   font-family: DM Sans;
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 1.28;
-
-//   color: $btn1-prod-loc;
-//   background-color: $polar;
-//   border-radius: 22px;
-//   border: 0 solid transparent;
-//   cursor: pointer;
-
-//   transition: $tt $tf;
-//   // (добавляет трансформацию)
-
-//   &:hover,
-//   &:focus {
-//     background-color: $btn2-hover;
-//     // (добавляет ховер для наших светлых кнопок)
-//   }
-// }
-
-// .loc__btn::after {
-//   content: '\003E';
-//   position: relative;
-//   top: 2px;
-//   //  (подправляет положении стрелки)
-
-//   margin-left: 14px;
-//   color: $btn1-prod-loc;
-// }
