@@ -15,35 +15,22 @@
 
   &-wraper {
     position: relative;
-
     top: -84px;
-    min-width: 320px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 480px;
     padding: 0 50px;
 
-    @include breakpoint(tablet-to-desktop) {
+    @include breakpoint(tablet) {
       top: -78px;
+      max-width: 970px;
       padding: 0 36px;
     }
 
     @include breakpoint(desktop) {
       top: -102px;
+      max-width: 1280px;
       padding: 0 115px;
     }
   }
-}
-
-/*Убрать  после обновления общей страницы*/
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .locations {
@@ -69,6 +56,13 @@
     background: $polar;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    transition: 250ms;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.5);
+      transform: scale(1.05);
+    }
 
     @include breakpoint(until-tablet) {
       &:not(:last-child) {
@@ -101,7 +95,7 @@
     margin-bottom: 25px;
     padding: 0 30px;
 
-    @include font(12px, 1.83);
+    @include font(12px, 1.86);
     letter-spacing: 0.04em;
     color: $polar;
     text-transform: uppercase;
@@ -211,60 +205,50 @@
   color: $secondary;
   font-style: normal;
 
-  @include breakpoint(tablet) {
-      @include font(14px, 1.83);
-    }
+  &:hover,
+  &:focus {
+    color: $main;
+  }
 
-    @include breakpoint(desktop) {
-      @include font(16px, 1.83);
-    }
-}
-
-/*Поменять флексы, как подправится флекс миксин*/
-.locations-button-list {
   @include breakpoint(tablet) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+    @include font(14px, 1.83);
+  }
+
+  @include breakpoint(desktop) {
+    @include font(16px, 1.83);
   }
 }
 
-.button {
-  /*Поменять флексы, как подправится флекс миксин*/
-  display: flex;
-  justify-content: center;
+.locations-button-list {
+  text-align: center;
 
-  align-items: center;
-  flex-wrap: nowrap;
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  height: 44px;
-  padding: 0 17px;
+  @include breakpoint(tablet) {
+    @include flexbox();
+  }
+}
 
+.button__location {
+  
   @include font(16px, 1.31, 700);
   letter-spacing: 0.06em;
-  border-radius: 22px;
-  border: transparent;
-  cursor: pointer;
 
-  &-locations {
+  &::after {
+      position: relative;
+      top: 2px;
+    }
+
+  &--locations {
     margin-bottom: 10px;
     background-color: $btn1-prod-loc;
     color: $polar;
 
+    &::after {
+      color: $polar;
+    }
+
     @include breakpoint(tablet) {
       margin-bottom: 0;
       margin-right: 15px;
-    }
-
-    &__text {
-      margin-right: 4px;
-    }
-
-    &__icon {
-      --color2: #fff;
     }
 
     &:hover,
@@ -273,17 +257,12 @@
     }
   }
 
-  &-franchise {
-    background-color: $polar;
-    color: $main;
+  &--franchise {
 
     &:hover,
     &:focus {
       background-color: $btn2-hover;
     }
 
-    &__text {
-      margin-right: 4px;
-    }
   }
 }
