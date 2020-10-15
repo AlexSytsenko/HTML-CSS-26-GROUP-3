@@ -56,6 +56,13 @@
     background: $polar;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    transition: 250ms;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.5);
+      transform: scale(1.05);
+    }
 
     @include breakpoint(until-tablet) {
       &:not(:last-child) {
@@ -198,6 +205,11 @@
   color: $secondary;
   font-style: normal;
 
+  &:hover,
+  &:focus {
+    color: $main;
+  }
+
   @include breakpoint(tablet) {
     @include font(14px, 1.83);
   }
@@ -216,23 +228,7 @@
 }
 
 .button__location {
-  /*Поменять флексы, как подправится флекс миксин*/
-  /*display: flex;
-  justify-content: center;
-
-  align-items: center;
-  flex-wrap: nowrap;
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  height: 44px;
-  padding: 0 17px;
-
-  @include font(16px, 1.31, 700);
-  letter-spacing: 0.06em;
-  border-radius: 22px;
-  border: 0 solid transparent;
-  cursor: pointer;*/
+  
   @include font(16px, 1.31, 700);
   letter-spacing: 0.06em;
 
@@ -272,29 +268,3 @@
 
   }
 }
-
-/*.button {
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  display: inline-flex;
-  min-width: 176px;
-  min-height: 44px;
-
-  font-family: DM Sans;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.28;
-
-  color: $btn1-prod-loc; 
-  background-color: $polar;
-  border-radius: 22px;
-  border: 0 solid transparent;
-  cursor: pointer;
-}
-
-.button::after {
-  content: '\003E';
-  margin-left: 14px;
-  color: $btn1-prod-loc;
-}*/
