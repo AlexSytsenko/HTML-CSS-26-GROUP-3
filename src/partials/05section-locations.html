@@ -122,3 +122,52 @@
     </ul>
   </div>
 </section>
+
+<!-- То что можно добавить в общий класс
+  .button
+
+  добавить 
+  transition: $tt: 150ms; $tf: cubic-bezier(0.4, 0, 0.2, 1);
+
+  ::after {
+      position: relative;top: 2px;  (подправляет положении стрелки)}
+
+    &:hover,
+    &:focus {
+      background-color: $btn2-hover; (добавляет ховер для наших светлых кнопок)
+    }
+ -->
+
+
+ <!-- как будет выглядеть при добавлении!!!!
+  
+  .button {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: inline-flex;
+  min-width: 176px;
+  min-height: 44px;
+
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+
+  color: $btn1-prod-loc; 
+  background-color: $polar;
+  border-radius: 22px;
+  border: 0 solid transparent;
+  cursor: pointer;
+
+  transition: $tt: 150ms; $tf: cubic-bezier(0.4, 0, 0.2, 1); (добавляет трансформацию)
+
+  &:hover,&:focus {background-color: $btn2-hover; (добавляет ховер для наших светлых кнопок)}
+}
+
+.button::after {
+  content: '\003E';
+  position: relative;top: 2px;  (подправляет положении стрелки)}
+  margin-left: 14px;
+  color: $btn1-prod-loc;
+} -->
