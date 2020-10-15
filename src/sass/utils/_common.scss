@@ -144,39 +144,17 @@ h5 {
 
 // Общий класс кнопки
 .button {
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  display: inline-flex;
-  min-width: 176px;
-  min-height: 44px;
-
-  font-family: DM Sans;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.28;
-
-  color: $btn1-prod-loc;
-  background-color: $polar;
-  border-radius: 22px;
-  border: 0 solid transparent;
-  cursor: pointer;
-
   transition: $tt $tf;
-  // (добавляет трансформацию)
-
-  &:hover,
-  &:focus {
-    background-color: $btn2-hover;
-    // (добавляет ховер для наших светлых кнопок)
-  }
 }
 
-.button::after {
-  content: '\003E';
-  position: relative;
-  top: 2px;
-  // (подправляет положении стрелки)}
-  margin-left: 14px;
-  color: $btn1-prod-loc;
+.button {
+  &::after {
+    position: relative;
+    top: 2px;
+
+    &:hover,
+    &:focus {
+      background-color: $btn2-hover;
+    }
+  }
 }
