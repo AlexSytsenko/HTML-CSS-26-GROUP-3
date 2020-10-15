@@ -2,30 +2,14 @@
   font-family: 'Titan One';
 
   background: $section-bg;
-
-  // @include breakpoint(tablet-to-desktop) {
-  // }
-
-  // @include breakpoint(desktop) {
-  // }
 }
 
-.promo-container {
-  position: relative;
-
-  top: -84px;
-  min-width: 320px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 50px;
-
-  @include breakpoint(tablet-to-desktop) {
-    top: -78px;
-    padding: 0 36px 0 76px;
+.promo__container {
+  @include breakpoint(tablet) {
+    padding: 0 75px 0 35px;
   }
 
   @include breakpoint(desktop) {
-    top: -102px;
     padding: 0 115px;
   }
 }
@@ -57,7 +41,7 @@
     }
   }
   @include breakpoint(tablet-to-desktop) {
-    width: calc((100% - 20px * 2) / 3);
+    width: calc((100% - 60px * 2) / 3);
 
     &:not(:last-child) {
       margin-right: 60px;
@@ -79,32 +63,19 @@
 
   background-repeat: no-repeat;
   background-position: left;
-
-  @include breakpoint(until-tablet) {
-    width: 230px;
-  }
-  @include breakpoint(tablet-to-desktop) {
-    width: 180px;
-    width: calc((100% - 20px * 2) / 3);
-  }
-  @include breakpoint(desktop) {
-    width: 330px;
-    width: calc((100% - 30px * 2) / 3);
-  }
 }
 
 .promo__icon:nth-child(1)::before {
-  background-image: url(/images/svg_icon/icon1.svg);
+  background-image: url(../images/svg_icon/icon1.svg);
 }
 .promo__icon:nth-child(2)::before {
-  background-image: url(/images/svg_icon/icon2.svg);
+  background-image: url(../images/svg_icon/icon2.svg);
 }
 .promo__icon:nth-child(3)::before {
-  background-image: url(/images/svg_icon/icon3.svg);
+  background-image: url(../images/svg_icon/icon3.svg);
 }
 
 .promo__title {
-  // margin-bottom: 10px;
   @include font(36px, 1.86);
   letter-spacing: 0.04em;
   color: $main;
@@ -139,7 +110,7 @@
   }
 }
 
-// .promo__collage {
-//   position: absolute;
-//   top: 0;
-// }
+.promo__collage {
+  margin-left: auto;
+  margin-right: auto;
+}
