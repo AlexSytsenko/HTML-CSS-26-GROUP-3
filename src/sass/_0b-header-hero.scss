@@ -1,36 +1,48 @@
 .hero__indented {
-display: flex;
-justify-content: normal;
-background-color: $hero-bg;
-background-position: 50% 50%;
-max-width: 1600px;
-margin: 0 auto;
+  display: flex;
+  justify-content: normal;
+  background-color: $hero-bg;
+  background-position: 50% 50%;
+  max-width: 1600px;
+  margin: 0 auto;
 
-@include breakpoint(mobile-to-tablet) {
-  // max-width: 768px;
-  height: 502px;
-}
+  @include breakpoint(mobile-to-tablet) {
+    // max-width: 768px;
+    height: 502px;
+  }
 
-@include breakpoint(tablet-to-desktop) {
-  // min-width: 768px;
-  height: 399px;
-  // padding: 0 34px;
-}
+  @include breakpoint(tablet-to-desktop) {
+    // min-width: 768px;
+    height: 399px;
+    // padding: 0 34px;
+  }
 
-@include breakpoint(desktop) {
-  height: 665px;
-}
+  @include breakpoint(desktop) {
+    height: 665px;
+  }
 }
 
 .hero__flex {
   // @include flexbox;
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
   position: relative;
   z-index: 1;
 
+  @include breakpoint(mobile) {
+    align-items: flex-start;
+  }
+
   @include breakpoint(tablet-to-desktop) {
     align-items: flex-start;
+    margin-right: 34px;
+  }
+
+  @include breakpoint(desktop) {
+    align-items: flex-start;
+    margin-right: 109px;
   }
 }
 
@@ -40,7 +52,7 @@ margin: 0 auto;
 
   @include breakpoint(mobile) {
     width: 218px;
-    // margin-top: 193px;
+    margin-top: 193px;
     margin-left: 20px;
   }
 
@@ -52,7 +64,7 @@ margin: 0 auto;
 
   @include breakpoint(desktop) {
     width: 315px;
-    margin-top: 84px;
+    margin-top: 171px;
     margin-left: 77px;
   }
 }
@@ -65,10 +77,8 @@ margin: 0 auto;
   text-transform: uppercase;
   margin-bottom: 19px;
 
-
   @include breakpoint(tablet-to-desktop) {
-    font: normal 400 22px/1.14em 'Titan One',
-      cursive;
+    font: normal 400 22px/1.14em 'Titan One', cursive;
     margin-bottom: 20px;
   }
 
@@ -102,6 +112,7 @@ margin: 0 auto;
   border: none;
   background: $btn1-prod-loc;
   color: $btn2-franchise;
+  transition: color 150ms linear;
 
   // transition: background-color $time $time-function;
   @include breakpoint(desktop) {
@@ -109,6 +120,12 @@ margin: 0 auto;
     width: 104px;
     height: 40px;
     margin-left: 38px;
+  }
+
+  &:hover,
+  &:focus {
+    background: $btn1-hover;
+    color: $btn2-franchise;
   }
 }
 
@@ -118,6 +135,7 @@ margin: 0 auto;
   background: $btn2-franchise;
   color: $btn1-prod-loc;
   margin-left: 8px;
+  transition: color 150ms linear;
 
   @include breakpoint(desktop) {
     font: normal 400 14px/1.29em 'DM Sans', sans-serif;
@@ -125,18 +143,12 @@ margin: 0 auto;
     margin-left: 15px;
   }
 
-}
+  &:hover,
+  &:focus {
+    background: $btn2-hover;
+    color: $btn1-prod-loc;
+  }
 
-.hero__button:hover,
-.hero__button:focus {
-  background: $btn1-hover;
-  color: $btn2-franchise;
-}
-
-.hero__button--max:hover,
-.hero__button--max:focus {
-  background: $btn2-hover;
-  color: $btn1-prod-loc;
 }
 
 .hero__hidden {
@@ -166,7 +178,6 @@ margin: 0 auto;
 .hero__description {
   display: none;
 
-
   @include breakpoint(tablet-to-desktop) {
     position: absolute;
     display: block;
@@ -177,8 +188,11 @@ margin: 0 auto;
 
   @include breakpoint(desktop) {
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 200px;
+    margin-top: 177px;
     margin-left: 295px;
     //  margin-bottom: 59px;
   }
@@ -207,10 +221,18 @@ margin: 0 auto;
   border: none;
   background-color: $btn2-franchise;
   fill: $btn1-prod-loc;
+  transition: color 150ms linear;
 
   @include breakpoint(desktop) {
     width: 26px;
     height: 26px;
+  }
+
+
+  &:hover,
+  &:focus {
+    background-color: $btn2-hover;
+    fill: $btn1-prod-loc;
   }
 }
 
@@ -227,7 +249,7 @@ margin: 0 auto;
 .hero__ice {
   display: flex;
   z-index: -1;
-  }
+}
 
 .hero__ice-img {
   position: absolute;
@@ -290,47 +312,64 @@ margin: 0 auto;
   display: none;
 
   @include breakpoint(tablet-to-desktop) {
-    display: block;
-    position: absolute;
-    left: 100%;
-    bottom: 0;
-    transform: translateX(220%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    // position: absolute;
+    // left: 100%;
+    // bottom: 0;
+    // transform: translateX(220%);
     margin-top: 94px;
-    margin-right: 34px;
+    // margin-right: 34px;
     text-align: right;
   }
 
   @include breakpoint(desktop) {
-    display: block;
-
-    position: absolute;
-    // left: 100%;
-    bottom: 0;
-    transform: translateX(272%);
-    // margin-top: 156px;
-    margin-right: 109px; // для выравнивания по правому краю
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 156px;
     text-align: right;
+    // position: absolute;
+    // left: 100%;
+    // bottom: 0;
+    // transform: translateX(272%);
+    //
+    // margin-right: 109px; // для выравнивания по правому краю
+    //
   }
 }
 
+// .hero__decorate-up {
+//   display: none;
+
+//   @include breakpoint(tablet-to-desktop) {
+//     display: flex;
+//     flex-direction: column;
+
+//   }
+
+//   @include breakpoint(desktop) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+// }
 .hero__text-min {
   // display: none;
+  position: relative;
+  margin-right: 8px;
+  color: $polar;
 
   @include breakpoint(tablet-to-desktop) {
-    position: relative;
-    margin-right: 8px;
-    font: normal 400 8px/1.25em 'Titan One', cursive;
+    font: normal 400 8px/1.25em 'DM Sans', sans-serif;
     letter-spacing: 0.04em;
-    margin-bottom: 24px;
-    color: $polar;
+    margin-bottom: 13px;
   }
 
   @include breakpoint(desktop) {
-
-    font: normal 400 14px/1.28em 'Titan One', cursive;
-    letter-spacing: 0.04em;
-    margin-bottom: 38px;
-    color: $polar;
+    font: normal 400 14px/1.28em 'DM Sans', sans-serif;
+    margin-bottom: 15px;
   }
 }
 
@@ -361,35 +400,37 @@ margin: 0 auto;
   color: $main;
 
   @include breakpoint(tablet-to-desktop) {
-    font: normal 400 28px/1.145em 'Titan One',
-      cursive;
+    font: normal 400 28px/1.145em 'Titan One', cursive;
     // margin-bottom: 19px;
   }
 
   @include breakpoint(desktop) {
-    font: normal 400 46px/1.15em 'Titan One',
-      cursive;
+    font: normal 400 46px/1.15em 'Titan One', cursive;
   }
 }
 
-.hero__decorate-tasty {
-  display: none;
+// .hero__decorate-tasty {
+//   display: none;
 
-  @include breakpoint(tablet-to-desktop) {
-    display: flex;
-  }
-}
+//   @include breakpoint(tablet-to-desktop) {
+//     display: flex;
+//   }
+//    @include breakpoint(desktop) {
+//      display: flex;
+//    }
+// }
 
 .hero__tasty {
   @include breakpoint(tablet-to-desktop) {
     display: flex;
     justify-content: flex-end;
     width: 168px;
-    margin-top: 72px;
+    margin-top: 62px;
   }
 
   @include breakpoint(desktop) {
     display: flex;
+    justify-content: flex-end;
     width: 293px;
     margin-top: 109px;
   }
