@@ -15,35 +15,22 @@
 
   &-wraper {
     position: relative;
-
     top: -84px;
-    min-width: 320px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 480px;
     padding: 0 50px;
 
-    @include breakpoint(tablet-to-desktop) {
+    @include breakpoint(tablet) {
       top: -78px;
+      max-width: 970px;
       padding: 0 36px;
     }
 
     @include breakpoint(desktop) {
       top: -102px;
+      max-width: 1280px;
       padding: 0 115px;
     }
   }
-}
-
-/*Убрать  после обновления общей страницы*/
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .locations {
@@ -101,7 +88,7 @@
     margin-bottom: 25px;
     padding: 0 30px;
 
-    @include font(12px, 1.83);
+    @include font(12px, 1.86);
     letter-spacing: 0.04em;
     color: $polar;
     text-transform: uppercase;
@@ -212,27 +199,25 @@
   font-style: normal;
 
   @include breakpoint(tablet) {
-      @include font(14px, 1.83);
-    }
+    @include font(14px, 1.83);
+  }
 
-    @include breakpoint(desktop) {
-      @include font(16px, 1.83);
-    }
-}
-
-/*Поменять флексы, как подправится флекс миксин*/
-.locations-button-list {
-  @include breakpoint(tablet) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+  @include breakpoint(desktop) {
+    @include font(16px, 1.83);
   }
 }
 
-.button {
+.locations-button-list {
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    @include flexbox();
+  }
+}
+
+.button__location {
   /*Поменять флексы, как подправится флекс миксин*/
-  display: flex;
+  /*display: flex;
   justify-content: center;
 
   align-items: center;
@@ -246,25 +231,28 @@
   @include font(16px, 1.31, 700);
   letter-spacing: 0.06em;
   border-radius: 22px;
-  border: transparent;
-  cursor: pointer;
+  border: 0 solid transparent;
+  cursor: pointer;*/
+  @include font(16px, 1.31, 700);
+  letter-spacing: 0.06em;
 
-  &-locations {
+  &::after {
+      position: relative;
+      top: 2px;
+    }
+
+  &--locations {
     margin-bottom: 10px;
     background-color: $btn1-prod-loc;
     color: $polar;
 
+    &::after {
+      color: $polar;
+    }
+
     @include breakpoint(tablet) {
       margin-bottom: 0;
       margin-right: 15px;
-    }
-
-    &__text {
-      margin-right: 4px;
-    }
-
-    &__icon {
-      --color2: #fff;
     }
 
     &:hover,
@@ -273,7 +261,7 @@
     }
   }
 
-  &-franchise {
+  &--franchise {
     background-color: $polar;
     color: $main;
 
@@ -282,8 +270,31 @@
       background-color: $btn2-hover;
     }
 
-    &__text {
-      margin-right: 4px;
-    }
   }
 }
+
+/*.button {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: inline-flex;
+  min-width: 176px;
+  min-height: 44px;
+
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+
+  color: $btn1-prod-loc; 
+  background-color: $polar;
+  border-radius: 22px;
+  border: 0 solid transparent;
+  cursor: pointer;
+}
+
+.button::after {
+  content: '\003E';
+  margin-left: 14px;
+  color: $btn1-prod-loc;
+}*/
