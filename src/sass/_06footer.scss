@@ -224,19 +224,64 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
     padding: 10px 0;
   }
 }
+#top__button {
+  display: inline-block;
+  background-color: $sub-title;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 15px;
+  right: 0;
+  border-radius: 50%;
 
-.body__top-arrow {
-  position: sticky;
-  // right: 2%;
-  left: 10px;
-  right: 10px;
-  bottom: 3px;
-  width: 40px;
-  height: 40px;
-  background-color: tomato;
-  opacity: 0.2;
+  @include breakpoint(tablet) {
+    bottom: 10px;
+    right: 10px;
+  }
 
-  &:hover {
-    opacity: 1;
+  @include breakpoint(desktop) {
+    width: 50px;
+    bottom: 55px;
+    right: 30px;
+  }
+
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#top__button::after {
+  content: '\f0aa';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#top__button.show {
+  opacity: 0.4;
+  visibility: visible;
+}
+
+#top__button:hover {
+  cursor: pointer;
+  background-color: $sub-title;
+  opacity: 1;
+  background: darken($sub-title, 10%);
+  animation: bounceright 0.3s alternate ease infinite;
+}
+#top__button:active {
+  background-color: darken($color: $btn1-hover, $amount: 10%);
+}
+
+@keyframes bounceright {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateY(-3px);
   }
 }
