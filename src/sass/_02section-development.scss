@@ -5,6 +5,26 @@
   background-size: 100%;
   background-position-y: 80%;
   background-repeat: no-repeat;
+
+@include breakpoint(mobile) {
+    background-image: url('../images/mobile/section2/milkbg.png');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/mobile/section2/milkbg@2x.png');
+    }
+  }
+
+  @include breakpoint(desktop) {
+    background-image: url('../images/desktop/section2/milkbg.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/section2/milkbg@2x.png');
+    }
+  }
+
 }
 
 .development__container {
@@ -31,20 +51,19 @@
   margin-bottom: 26px;
 
   @include breakpoint(tablet-to-desktop) {
-    margin-bottom: 16px;
+    margin-bottom: 50px;
+  }
 
     @include breakpoint(desktop) {
     margin-bottom: 55px;
-  }
   }
 }
 
 .development__image {
   @include breakpoint(until-tablet) {
-  width: 280px;
-  height: 279px;
   margin-bottom: 46px;
    }
+
 }
 
 .development__flexbox {
@@ -134,8 +153,11 @@
     align-self: start;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $btn2-hover;
+    animation-duration: $tt;
+    transition-timing-function: $tf;
   }
 }
 
