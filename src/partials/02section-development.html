@@ -3,39 +3,20 @@
     <h2 class="development__title first-title">tradition and love</h2>
     <h3 class="development__subtitle second-title">how it’s made?</h3>
     <div class="development__flexbox flexbox">
-      <picture>
-        <source
-          srcset="
-            ./images/mobile/section2/biocow.png    1x,
-            ./images/mobile/section2/biocow@2x.png 2x
-          "
-          media="(max-width: 767px"
-        />
-
-        <source
-          srcset="
-            ./images/desktop/section2/biocow.png    1x,
-            ./images/desktop/section2/biocow@2x.png 2x
-          "
-          media="(min-width: 1200px)"
-        />
-
-        <source
-          srcset="
-            ./images/tablet/section2/biocow.png    1x,
-            ./images/tablet/section2/biocow@2x.png 2x
-          "
-          media="(min-width: 768px"
-        />
-             <img
-          class="development__image image"
-          src="./images/mobile/section2/biocow.png"
-          alt="Кувшин молока на фоне пасущейся на лугу коровы"
-        />
-            </picture
-      >
+      <picture class="development__image">
+        <img srcset="
+        ./images/mobile/section2/biocow.png 280w,
+        ./images/mobile/section2/biocow@2x.png 650w,
+        ./images/tablet/section2/biocow.png 340w,
+        ./images/tablet/section2/biocow@2x.png 680w,
+        ./images/desktop/section2/biocow.png 516w,
+        ./images/desktop/section2/biocow@2x.png 1032w
+        " sizes="(min-width: 1280px) 516w, 
+               (min-width: 768px) 340w, (min-width: 320px) 280w" src="./images/mobile/section2/biocow.png" alt="Кувшин молока на фоне пасущейся на лугу коровы"
+          class="img" />
+            </picture>
       <div class="development__description">
-        < class="development__text">Fusce ut velit laoreet, tempus arcu eu,
+        <p class="development__text">Fusce ut velit laoreet, tempus arcu eu,
         molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas
         eros. Maecenas eleifend erat at justo fringilla.
         <p class="development__text development__text--part-one">
@@ -47,7 +28,7 @@
         <p class="development__text development__text--part-two">
           Aliquam erat volutpat. Aenean accumsan.
         </p>
-        <button class="development__button button">Read more</button>
+        <button class="development__button">Read more</button>
       </div>
     </div>
   </div>
