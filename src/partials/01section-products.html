@@ -1,35 +1,131 @@
 <section class="products">
-  <h2 class="title visually-hidden">
-    <span class="first-title">100% natural</span>
-    <br />
-    <span class="second-title">products</span>
-  </h2>
-
-  <ul class="products__list">
-    <li class="products__item">
-      <h3 class="prodacts__title">ice cream</h3>
-      <p class="products__label">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et. dolore magna aliqua facilisis.
-      </p>
-    </li>
-  </ul>
-  <ul>
-    <li class="products__item--list">
-      <h3 class="prodacts__title">ice coffee</h3>
-      <p products__label>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et. dolore magna aliqua facilisis.
-      </p>
-    </li>
-  </ul>
-  <ul>
-    <li class="products__item--list">
-      <h3 class="title__item--list">milkshakes</h3>
-      <p products__label>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et. dolore magna aliqua facilisis.
-      </p>
-    </li>
-  </ul>
+  <div class="products__container container">
+    <h2 class="products__first-title first-title">100% natural</h2>
+    <h3 class="products__second-title second-title">products</h3>
+    <ul class="products-list">
+      <li class="products-list__item">
+        <picture>
+          <source
+            srcset="
+              ./images/mobile/section1/pink.png    1x,
+              ./images/mobile/section1/pink@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="
+              ./images/desktop/section1/pink.png    1x,
+              ./images/desktop/section1/pink@2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/tablet/section1/pink.png    1x,
+              ./images/tablet/section1/pink@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            class="products-list__image"
+            src="./images/mobile/section1/pink.png"
+            alt="ice cream"
+          />
+        </picture>
+        <h4 class="products-list__title">ice cream</h4>
+        <p class="products-list__dots">&hellip;</p>
+        <p class="products-list__content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products-list__button">
+          <svg class="products-list__icon" width="15" height="15">
+            <use href="./images/sprite_work.svg#icon-arrow-right2"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="products-list__item">
+        <picture>
+          <source
+            srcset="
+              ./images/mobile/section1/coffe.png    1x,
+              ./images/mobile/section1/coffe@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="
+              ./images/desktop/section1/coffe.png    1x,
+              ./images/desktop/section1/coffe@2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/tablet/section1/coffe.png    1x,
+              ./images/tablet/section1/coffe@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            class="products-list__image"
+            src="./images/mobile/section1/coffe.png"
+            alt="ice cream"
+          />
+        </picture>
+        <h4 class="products-list__title">ice cochocolate</h4>
+        <p class="products-list__dots">&hellip;</p>
+        <p class="products-list__content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products-list__button">
+          <svg class="products-list__icon" width="15" height="15">
+            <use href="./images/sprite_work.svg#icon-arrow-right2"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="products-list__item">
+        <picture>
+          <source
+            srcset="
+              ./images/mobile/section1/chocolate.png    1x,
+              ./images/mobile/section1/chocolate@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="
+              ./images/desktop/section1/chocolate.png    1x,
+              ./images/desktop/section1/chocolate@2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/tablet/section1/chocolate.png    1x,
+              ./images/tablet/section1/chocolate@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            class="products-list__image"
+            src="./images/mobile/section1/chocolate.png"
+            alt="ice cream"
+          />
+        </picture>
+        <h4 class="products-list__title">milkshakes</h4>
+        <p class="products-list__dots">&hellip;</p>
+        <p class="products-list__content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products-list__button">
+          <svg class="products-list__icon" width="15" height="15">
+            <use href="./images/sprite_work.svg#icon-arrow-right2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
 </section>
