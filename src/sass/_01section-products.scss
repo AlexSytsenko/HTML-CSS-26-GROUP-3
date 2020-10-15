@@ -1,0 +1,143 @@
+// .products-title {
+//   padding-bottom: 98px;
+//   padding-top: 121px;
+// }
+
+// .first-title {
+//   margin-bottom: 15px;
+//   font-family: 'Titan One', cursive;
+//   font-size: 18px;
+//   line-height: 1.17;
+
+//   text-align: center;
+//   text-transform: uppercase;
+
+//   color: $sub-title;
+
+//   @include breakpoint(tablet) {
+//     font-size: 26px;
+//     line-height: 1.15;
+//   }
+
+//   @include breakpoint(desktop) {
+//     font-size: 30px;
+//     line-height: 1.13;
+//   }
+// }
+
+// .second-title {
+//   font-family: 'Titan One', cursive;
+//   font-size: 34px;
+//   line-height: 1.15;
+
+//   letter-spacing: 0.04em;
+
+//   text-align: center;
+//   text-transform: uppercase;
+
+//   color: $main;
+
+//   @include breakpoint(tablet) {
+//     font-size: 48px;
+//     line-height: 1.15;
+//   }
+
+//   @include breakpoint(desktop) {
+//     font-size: 58px;
+//     line-height: 1.14;
+//     letter-spacing: 0.06em;
+//   }
+// }
+.products__container {
+  padding-top: 128px;
+  padding-bottom: 98px;
+  width: auto;
+  max-width: 480px;
+}
+
+.products__first-title {
+  margin-bottom: 15px;
+}
+
+.products__second-title {
+  margin-bottom: 144px;
+}
+
+.products-list__item {
+  text-align: center;
+  padding-bottom: 41px;
+  border-radius: 24px;
+
+  &:nth-child(1) {
+    background-color: $ice-cream;
+  }
+
+  &:nth-child(2) {
+    background-color: $ice-coffee;
+  }
+  &:nth-child(3) {
+    background-color: $milk-shake;
+  }
+  &:not(:last-child) {
+    margin-bottom: 130px;
+  }
+}
+
+.products-list__image {
+  display: inline-block;
+  margin-top: -114px;
+}
+
+.products-list__title {
+  font-family: Titan One;
+  font-size: 20px;
+  line-height: 1.15;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $polar;
+}
+
+.products-list__dots {
+  color: $polar;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.products-list__content {
+  //   max-width: 200px;
+  margin: 0 auto 30px;
+  padding: 0 40px;
+
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+
+  letter-spacing: 0.04em;
+
+  color: $polar;
+}
+
+.products-list__button {
+  @include flexbox;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border: transparent;
+  border-radius: 50%;
+
+  background-color: $polar;
+
+  &:hover,
+  &:focus {
+    background-color: $btn2-hover;
+  }
+}
+
+.products-list__icon {
+  fill: $main;
+}
