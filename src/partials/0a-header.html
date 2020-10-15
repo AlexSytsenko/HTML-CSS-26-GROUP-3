@@ -1,27 +1,57 @@
 <div class="container__relative">
   <header class="header">
     <a href="./index.html" class="logo">
-      <img src="/images/logo.png" alt="Icecream logo" />
+      <img
+        class="logo__img"
+        src="/images/desktop/logo.png"
+        alt="Icecream logo"
+        width="199"
+        height="50"
+      />
     </a>
     <button type="button" class="header__button flexbox" data-menu-button>
       <svg
+        viewbox="0 0 64 64"
+        class="header__button--cross"
         width="24"
         height="24"
         aria-expanded="false"
         aria-controls="burger"
         aria-label="Mobile menu switcher"
       >
-        <path
-          width="14"
-          height="14"
-          class="header__button--cross"
-          d="M11 1.108L9.892 0 5.5 4.392 1.108 0 0 1.108 4.392 5.5 0 9.892 1.108 11 5.5 6.608 9.892 11 11 9.892 6.608 5.5 11 1.108z"
+        <line
+          x1="9.37"
+          x2="54.63"
+          y1="9.37"
+          y2="54.63"
+          fill="none"
+          stroke-miterlimit="10"
+          stroke-width="4"
         />
-
-        <path
-          class="header__button--menu"
-          d="M3.5 7a.5.5 0 010-1h17a.5.5 0 110 1h-17zm0 5a.5.5 0 110-1h17a.5.5 0 110 1h-17zm0 5a.5.5 0 110-1h17a.5.5 0 110 1h-17z"
+        <line
+          x1="9.37"
+          x2="54.63"
+          y1="54.63"
+          y2="9.37"
+          fill="none"
+          stroke-miterlimit="10"
+          stroke-width="4"
         />
+      </svg>
+      <svg
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewbox="0 0 32 32"
+        class="header__button--menu"
+        width="24"
+        height="24"
+        aria-expanded="false"
+        aria-controls="burger"
+        aria-label="Mobile menu switcher"
+      >
+        <path class="header__button--menu" d="M4 8h24M4 16h24M4 24h24" />
       </svg>
     </button>
     <div class="header__burger header__flexbox" id="burger" data-menu>
