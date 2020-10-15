@@ -11,7 +11,6 @@
 }
 
 .header {
-  // background-color: pink;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,18 +41,10 @@
 }
 
 .logo {
-  margin-right: 60px;
+  margin-right: 40px;
   @include breakpoint(desktop) {
     margin-right: 110px;
   }
-}
-
-.header__button--cross {
-  fill: $polar;
-}
-
-.header__button--menu {
-  fill: $main;
 }
 
 .header__button {
@@ -65,15 +56,16 @@
   background-color: transparent;
   cursor: pointer;
   z-index: 100;
-  outline: 1px solid black;
+
   @include breakpoint(desktop) {
     display: none;
   }
 }
+
 .header__button.is-open {
   position: absolute;
   top: 20px;
-  right: 31px;
+  right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,25 +79,27 @@
   display: none;
 }
 
-.header__button--cross {
+.header__button--cross,
+.header__button--cross:active {
   display: none;
-  fill: $polar;
+  stroke: $polar;
   transition: fill $tt $tf;
 }
 
-.header__button--menu {
-  fill: $main;
+.header__button--menu,
+.header__button--menu:active {
+  stroke: $main;
   transition: fill $tt $tf;
 }
 
 .header__button:hover .header__button--cross,
 .header__button:focus .header__button--cross {
-  fill: $main;
+  stroke: $main;
 }
 
 .header__button:hover .header__button--menu,
 .header__button:focus .header__button--menu {
-  fill: $btn2-hover;
+  stroke: $btn2-hover;
 }
 
 .header__burger {
@@ -174,29 +168,18 @@
       margin-left: 30px;
       width: 160px;
     }
+    @include breakpoint(desktop) {
+      margin-left: 0;
+      width: 159px;
+    }
   }
 }
+
 .burger__btn:hover,
 .burger__btn:focus,
 .burger__btn:active {
   background-color: $btn2-hover;
 }
-// &:hover .btn-icon,
-// &:focus .btn-icon,
-// &:active .btn-icon {
-//   fill: $polar;
-// }
-
-// .btn {
-//   font: normal 700 16px/1.3 'DM Sans', sans-serif;
-//   padding: 13px 40px;
-//   color: $main;
-//   background-color: $polar;
-//   border-radius: 22px;
-//   border: 1px solid transparent;
-//   transition: background-color $tt $tf;
-//   cursor: pointer;
-// }
 
 .navigation__list {
   @include breakpoint(desktop) {
@@ -229,6 +212,9 @@
   @include breakpoint(until-desktop) {
     text-align: left;
     padding-left: 12px;
+  }
+  @include breakpoint(desktop) {
+    @include font(16px, 1.3, 700);
   }
   &--current {
     color: $main;
