@@ -54,19 +54,18 @@
   &._active {
     transform: scale(1) translateY(0px);
     opacity: 1;
-  }
-
-  animation: glow 5s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #e18298;
-  }
-  to {
-    text-shadow: 0 0 50px #ffa5ba, 0 0 40px #e18298;
+    // animation: glow 2s ease alternate;
   }
 }
+
+// @keyframes glow {
+//   from {
+//     text-shadow: 0 0 30px #d41443;
+//   }
+//   to {
+//     text-shadow: 0 0 30px #ffa5ba, 0 0 40px #e18298;
+//   }
+// }
 
 .list-footer {
   @include flexbox($jc: flex-end, $ai: stretch, $w: wrap);
