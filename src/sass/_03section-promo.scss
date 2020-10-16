@@ -54,6 +54,15 @@
       margin-right: 30px;
     }
   }
+
+  opacity: 0;
+  transform: rotate(-1600deg) scale(0);
+  transition: all 0.8s ease 0s;
+}
+
+.promo__item._active {
+  opacity: 1;
+  transform: rotate(0) scale(1);
 }
 
 .promo__item::before {
@@ -121,6 +130,7 @@
 }
 
 .promo__collage {
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
 }
