@@ -1,5 +1,5 @@
 .products__container {
-  padding-top: 128px;
+  padding-top: 121px;
   padding-bottom: 98px;
   width: auto;
   max-width: 480px;
@@ -7,10 +7,28 @@
 
 .products__first-title {
   margin-bottom: 15px;
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 .products__second-title {
   margin-bottom: 144px;
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 .products-list__item {
@@ -31,11 +49,28 @@
   &:not(:last-child) {
     margin-bottom: 130px;
   }
+
+  transform: scale(0.3) translateY(-220%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+
+  &:nth-child(2) {
+    transition: all 0.8s ease 0.2s;
+  }
+  &:nth-child(3) {
+    transition: all 0.8s ease 0.4s;
+  }
 }
 
 .products-list__image {
   display: inline-block;
   margin-top: -114px;
+  margin-bottom: 22px;
 }
 
 .products-list__title {
@@ -81,6 +116,7 @@
   border-radius: 50%;
 
   background-color: $polar;
+  transition: all $tt $tf;
 
   &:hover,
   &:focus {
@@ -97,10 +133,12 @@
 @include breakpoint(tablet) {
   .products__container {
     max-width: 970px;
+    padding-top: 122px;
+    padding-bottom: 112px;
   }
 
   .products-list {
-    @include flexbox($jc: space-between, $ai: stretch);
+    @include flexbox($jc: center, $ai: stretch);
   }
 
   .products-list__item {
@@ -110,6 +148,10 @@
       margin-bottom: 0;
     }
   }
+  .products-list__image {
+    margin-bottom: 30px;
+  }
+
   .products__second-title {
     margin-bottom: 150px;
   }
@@ -126,6 +168,8 @@
 
 @include breakpoint(desktop) {
   .products__container {
+    padding-top: 127px;
+    padding-bottom: 119px;
     max-width: 100%;
   }
 
@@ -144,6 +188,7 @@
 
   .products-list__image {
     margin-top: -212px;
+    margin-bottom: 38px;
   }
 
   .products-list__title {
@@ -158,207 +203,3 @@
     line-height: 1.76;
   }
 }
-
-// .products__container {
-//   padding-top: 121px;
-//   padding-bottom: 98px;
-//   width: auto;
-//   max-width: 480px;
-// }
-
-// @media (min-width: 768px) {
-//   .products__container {
-//     margin-top: -78px;
-//     max-width: 970px;
-//     padding: 0 36px;
-//   }
-// }
-
-// @media (min-width: 1200px) {
-//   .products__container {
-//     margin-top: -102px;
-//     max-width: 100%;
-//     padding: 0 115px;
-//   }
-// }
-
-// .products__first-title {
-//   margin-bottom: 15px;
-//   margin-top: 135px;
-
-//   transform: translate(0px, 120%);
-//   opacity: 0;
-//   transition: all 0.8s ease 0s;
-
-//   &._active {
-//     transform: translate(0px, 0px);
-//     opacity: 1;
-//   }
-// }
-
-// .products__second-title {
-//   //   margin-bottom: 144px;
-//   margin-bottom: 174px;
-//   transform: translate(0px, 120%);
-//   opacity: 0;
-//   transition: all 0.8s ease 0s;
-
-//   &._active {
-//     transform: translate(0px, 0px);
-//     opacity: 1;
-//   }
-// }
-
-// .products-list__item {
-//   text-align: center;
-//   //   padding-bottom: 54px;
-//   border-radius: 24px;
-//   padding: 48px 28px;
-//   &:nth-child(1) {
-//     background-color: $ice-cream;
-//   }
-
-//   &:nth-child(2) {
-//     background-color: $ice-coffee;
-//   }
-//   &:nth-child(3) {
-//     background-color: $milk-shake;
-//   }
-
-//   @media (max-width: 767px) {
-//     &:not(:last-child) {
-//       margin-bottom: 230px;
-//     }
-//   }
-
-//   transform: scale(0.3) translateY(-120%);
-//   opacity: 0;
-//   transition: all 0.8s ease 0s;
-
-//   &._active {
-//     transform: scale(1) translateY(0px);
-//     opacity: 1;
-//   }
-// }
-
-// @media (max-width: 1199px) and (min-width: 768px) {
-//   .products-list {
-//     display: flex;
-//     // justify-content: normal;
-//     // align-items: normal;
-//     flex-wrap: wrap;
-//   }
-// }
-
-// @media (min-width: 1200px) {
-//   .products-list {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-// }
-
-// @media (max-width: 1199px) and (min-width: 768px) {
-//   .products-list__item {
-//     width: calc((100% - 30px * 2) / 3);
-//     padding: 52px 44px 61px;
-//   }
-// }
-// @media (min-width: 1200px) {
-//   .products-list__item:not(:last-child) {
-//     margin-right: 30px;
-//   }
-// }
-
-// @media screen and (max-width: 1199px) and (min-width: 768px) {
-//   .products-list__item:not(:last-child) {
-//     margin-right: 20px;
-//   }
-// }
-
-// @media (min-width: 1200px) {
-//   .products-list__item {
-//     width: calc((100% - 30px * 2) / 3);
-//     padding: 48px 22px;
-//   }
-// }
-
-// .products-list__image {
-//   display: inline-block;
-//   //   margin-top: -114px;
-//   margin-top: -200px;
-// }
-
-// @media screen and (max-width: 1199px) and (min-width: 768px) {
-//   .products-list__image {
-//     margin-top: -145px;
-//   }
-// }
-
-// .products-list__title {
-//   font-family: Titan One;
-//   font-size: 20px;
-//   line-height: 1.15;
-//   margin-top: 22px;
-//   margin-bottom: 30px;
-//   letter-spacing: 0.04em;
-//   text-transform: uppercase;
-
-//   color: $polar;
-// }
-
-// .products-list__dots {
-//   color: $polar;
-//   font-size: 35px;
-//   font-weight: 700;
-//   line-height: 1;
-//   margin-bottom: 30px;
-// }
-
-// .products-list__content {
-//   //   max-width: 200px;
-//   margin: 0 auto 30px;
-//   padding: 0 40px;
-
-//   font-family: DM Sans;
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 1.52;
-
-//   letter-spacing: 0.04em;
-
-//   color: $polar;
-// }
-
-// .products-list__button {
-//   @include flexbox;
-//   margin: 0 auto;
-//   width: 40px;
-//   height: 40px;
-//   border: transparent;
-//   border-radius: 50%;
-
-//   background-color: $polar;
-
-//   &:hover,
-//   &:focus {
-//     background-color: $btn2-hover;
-//   }
-// }
-
-// .products-list__icon {
-//   fill: $main;
-// }
-
-// @include breakpoint(tablet) {
-//   .products__container {
-//     padding-top: 122px;
-//     padding-bottom: 112px;
-//   }
-// }
-
-// @include breakpoint(desktop) {
-//   .products__container {
-//     padding-top: 127px;
-//     padding-bottom: 119px;
-//   }
-// }
