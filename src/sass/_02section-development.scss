@@ -32,9 +32,19 @@
   padding-bottom: 39px;
   width: 100%;
 
+  @include breakpoint(from-mobile) {
+    padding-top: 130px;
+    padding-bottom: 66px;
+  }
+
   @include breakpoint(tablet-to-desktop) {
     padding-top: 130px;
     padding-bottom: 66px;
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: 125px;
+    padding-bottom: 39px;
   }
 }
 

@@ -32,7 +32,7 @@
       @content;
     }
   } @else if $point == mobile-to-tablet {
-    @media (min-width: 320px) and (max-width: 767px) {
+    @media (min-width: 480px) and (max-width: 767px) {
       @content;
     }
   } @else if $point == mobile {
@@ -43,6 +43,10 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else if $point == from-mobile {
+    @media (min-width: 480px) {
       @content;
     }
   } @else if $point == mobile-only {
