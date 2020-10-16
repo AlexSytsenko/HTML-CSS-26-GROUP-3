@@ -67,6 +67,8 @@
 }
 
 .locations__item {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   padding: 43px 20px;
   text-align: left;
@@ -78,9 +80,43 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.5);
-    transform: scale(1.05);
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.4);
+    // transform: scale(1.05);
   }
+
+
+  /*Делаю фичу)*/
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: -250px;
+    width: 20px;
+    height: 100%;
+    background-color: rgba(230, 137, 158, 0.5);
+    filter: blur(50px);
+    transform: skewX(-45deg);
+    
+    
+  }
+
+  &:hover::before,
+  &:focus::before {
+    left: 300px;
+    top: 100%;
+    transition: 350ms;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    left: 300px;
+    top: 100%;
+    transition: 350ms 100ms;
+  }
+
+  
 
   @include breakpoint(until-tablet) {
     &:not(:last-child) {
@@ -123,6 +159,7 @@
     transition: all 0.8s ease 0.4s;
   }
 }
+
 
 .locations__caption {
   display: inline-block;
