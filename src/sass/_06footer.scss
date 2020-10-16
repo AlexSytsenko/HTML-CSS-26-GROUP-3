@@ -1,11 +1,12 @@
 .footer {
+  padding-top: 56.5px;
   background-color: $section-bg;
 }
 
 .footer__container {
   border-bottom: 1px solid gray;
   margin: 0 auto;
-  padding-top: 43px;
+  // padding-top: 43px;
   padding-bottom: 43px;
   width: 100%;
 
@@ -129,6 +130,10 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
 }
 
 @include breakpoint(tablet) {
+  .footer {
+    padding-top: 79px;
+  }
+
   .footer__container {
     display: flex;
     align-items: flex-start;
@@ -178,6 +183,10 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
 }
 
 @include breakpoint(desktop) {
+  .footer {
+    padding-top: 82.5px;
+  }
+
   .footer__container {
     justify-content: space-around;
   }
@@ -224,6 +233,8 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
     padding: 10px 0;
   }
 }
+
+// Кнопка Возврат Вверх!!!
 #top__button {
   display: inline-block;
   background-color: $sub-title;

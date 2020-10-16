@@ -1,6 +1,6 @@
 .slider {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 170px;
 }
 
 .slider-one__card:focus {
@@ -142,6 +142,11 @@
   display: flex;
 }
 @include breakpoint(tablet) {
+  .slider {
+    padding-top: 121px;
+    padding-bottom: 197px;
+  }
+
   .container--slider {
     padding: 0 74px;
   }
@@ -189,6 +194,10 @@
 }
 
 @include breakpoint(desktop) {
+  .slider {
+    padding-top: 123px;
+    padding-bottom: 234px;
+  }
   .container--slider {
     padding: 0 178px;
   }

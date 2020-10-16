@@ -2,44 +2,52 @@
   font-family: 'DM Sans', sans-serif;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 29px;
+  padding-bottom: 56.5px;
+
+  text-align: center;
+
   /*паддинг должен быть 113 - корректировка*/
-    background: $section-bg;
-  
+  background: $section-bg;
 
   @include breakpoint(tablet-to-desktop) {
     /*паддинг должен быть 158 - корректировка*/
-    padding-bottom: 80px;
+    padding-bottom: 79px;
   }
   /*паддинг должен быть 165px - корректировка*/
   @include breakpoint(desktop) {
-    padding-bottom: 63px;
+    padding-bottom: 82.5px;
 
     background-position: top;
     background-repeat: no-repeat;
     background-image: url(../images/desktop/section5/drops.png);
 
-    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/desktop/section5/drops@2x.png);
     }
   }
 }
 
 .locations-container {
-  position: relative;
-  top: -84px;
+  display: inline-block;
+  margin-top: -84px;
+  // position: relative;
+  // top: -84px;
   max-width: 480px;
   padding: 0 50px;
 
   @include breakpoint(tablet) {
-    top: -78px;
+    margin-top: -78px;
+    // top: -78px;
     max-width: 970px;
     padding: 0 36px;
   }
 
   @include breakpoint(desktop) {
-    top: -102px;
-    max-width: 1280px;
+    margin-top: -102px;
+    // top: -102px;
+    max-width: 100%;
     padding: 0 115px;
   }
 }

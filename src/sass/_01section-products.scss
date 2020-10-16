@@ -49,7 +49,7 @@
 //   }
 // }
 .products__container {
-  padding-top: 128px;
+  padding-top: 121px;
   padding-bottom: 98px;
   width: auto;
   max-width: 480px;
@@ -140,4 +140,18 @@
 
 .products-list__icon {
   fill: $main;
+}
+
+@include breakpoint(tablet) {
+  .products__container {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+}
+
+@include breakpoint(desktop) {
+  .products__container {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
 }
