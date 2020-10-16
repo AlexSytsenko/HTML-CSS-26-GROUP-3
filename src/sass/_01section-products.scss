@@ -47,6 +47,11 @@
   }
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 220px;
+  }
+}
 .products-list__image {
   display: inline-block;
   margin-top: -114px;
