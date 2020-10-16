@@ -1,21 +1,21 @@
 <section class="promo">
   <div class="promo__container container">
     <ul class="promo__list">
-      <li class="promo__item promo__icon">
+      <li class="promo__item promo__icon _anim-items _anim-no-hide">
         <h2 class="promo__title">721</h2>
         <p class="promo__text">
           Aliquam ac dui vel dui vulputate <br />
           consectetur. Mauris massa.
         </p>
       </li>
-      <li class="promo__item promo__icon">
+      <li class="promo__item promo__icon _anim-items _anim-no-hide">
         <h2 class="promo__title">16kg</h2>
         <p class="promo__text">
           Aliquam ac dui vel dui vulputate <br />
           consectetur. Mauris massa.
         </p>
       </li>
-      <li class="promo__item promo__icon">
+      <li class="promo__item promo__icon _anim-items _anim-no-hide">
         <h2 class="promo__title">84</h2>
         <p class="promo__text">
           Aliquam ac dui vel dui vulputate <br />
@@ -25,32 +25,37 @@
     </ul>
   </div>
 
-  <picture>
-    <source
-      srcset="
-        ./images/desktop/collage.jpg    1x,
-        ./images/desktop/collage@2x.jpg 2x
-      "
-      media="(min-width: 1200px)"
-    />
+  <div class="promo__picture-container">
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/collage.jpg    1x,
+          ./images/desktop/collage@2x.jpg 2x
+        "
+        media="(min-width: 1200px)"
+      />
 
-    <source
-      srcset="
-        ./images/desktop/collage.jpg    1x,
-        ./images/desktop/collage@2x.jpg 2x
-      "
-      media="(min-width: 768px)"
-    />
+      <source
+        srcset="
+          ./images/desktop/collage.jpg    1x,
+          ./images/desktop/collage@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
 
-    <source
-      srcset="./images/tablet/collage.jpg 1x, ./images/tablet/collage@2x.jpg 2x"
-      media="(max-width: 767px)"
-    />
+      <source
+        srcset="
+          ./images/tablet/collage.jpg    1x,
+          ./images/tablet/collage@2x.jpg 2x
+        "
+        media="(max-width: 767px)"
+      />
 
-    <img
-      class="promo__collage image"
-      src="./images/mobile/collage.jpg"
-      alt="collage"
-    />
-  </picture>
+      <img
+        class="promo__collage image"
+        src="./images/mobile/collage.jpg"
+        alt="collage"
+      />
+    </picture>
+  </div>
 </section>

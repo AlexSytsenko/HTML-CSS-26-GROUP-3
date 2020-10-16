@@ -54,6 +54,23 @@
       margin-right: 30px;
     }
   }
+
+  opacity: 0;
+  transform: rotate(-1600deg) scale(0);
+  transition: all 0.8s ease 0s;
+}
+
+.promo__item._active {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+
+  &:nth-child(2) {
+    transition: all 0.8s ease 0.2s;
+  }
+
+  &:nth-child(3) {
+    transition: all 0.8s ease 0.4s;
+  }
 }
 
 .promo__item::before {
@@ -110,7 +127,18 @@
   }
 }
 
+.promo__picture-container {
+  width: 100%;
+  background-color: #fff5f6;
+
+  @include breakpoint(desktop) {
+    height: 171px;
+    margin-bottom: 259px;
+  }
+}
+
 .promo__collage {
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
 }
