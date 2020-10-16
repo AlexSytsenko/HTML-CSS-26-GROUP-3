@@ -5,20 +5,20 @@
   background-position: 50% 50%;
   // max-width: 1600px;
   margin: 0 auto;
+  // min-height: 100vh;
 
   @include breakpoint(mobile-to-tablet) {
     // max-width: 768px;
-    height: 502px;
+    min-height: 100vh;
   }
 
   @include breakpoint(tablet-to-desktop) {
     // min-width: 768px;
-    height: 399px;
-  
+    max-height: 399px;
   }
 
   @include breakpoint(desktop) {
-    height: 665px;
+    max-height: 665px;
   }
 }
 
@@ -36,21 +36,20 @@
     align-items: flex-start;
     overflow: hidden;
     padding-left: 6.25%;
-  
   }
 
   @include breakpoint(tablet-to-desktop) {
     align-items: flex-start;
     padding-right: 4.43%;
     padding-left: 4.43%;
-        overflow: visible;
+    overflow: visible;
   }
 
   @include breakpoint(desktop) {
     align-items: flex-start;
     padding-right: 8.52%;
     padding-left: 6%;
-      overflow: visible;
+    overflow: visible;
   }
 }
 
@@ -61,7 +60,6 @@
   @include breakpoint(mobile) {
     width: 218px;
     padding-top: 193px;
-
   }
 
   @include breakpoint(tablet-to-desktop) {
@@ -105,9 +103,23 @@
   }
 
   @include breakpoint(desktop) {
-    font: normal 400 58px/0.905em 'Titan One', cursive;
+    font: normal 400 56px/0.905em 'Titan One', cursive;
   }
 }
+
+.hero__order-title--accent span {
+  @include breakpoint(desktop) {
+    display: inline-block;
+    transition: all 300ms linear;
+    //z-index: 3;
+    animation: glow 5s ease-in-out infinite alternate;
+  }
+}
+
+.hero__order-title--accent span:hover {
+  transform: translateY(-10px);
+}
+
 
 .hero__button {
   font: normal 400 8px/1.25em 'DM Sans', sans-serif;
@@ -154,7 +166,6 @@
     background: $btn2-hover;
     color: $btn1-prod-loc;
   }
-
 }
 
 .hero__hidden {
@@ -172,25 +183,22 @@
 .hero__milk {
   width: 124px;
   padding-top: 19px;
- 
 
   @include breakpoint(desktop) {
     width: 188px;
     padding-top: 56px;
-  
   }
 }
 
 .hero__description {
   display: none;
-  z-index: 2;
+
 
   @include breakpoint(tablet-to-desktop) {
     position: absolute;
     display: block;
     width: 114px;
     left: 154px;
-  
   }
 
   @include breakpoint(desktop) {
@@ -201,7 +209,6 @@
     width: 200px;
     padding-top: 177px;
     left: 295px;
-   
   }
 }
 
@@ -213,7 +220,7 @@
 
   @include breakpoint(desktop) {
     font: normal 400 14px/1.4em 'DM Sans', sans-serif;
-   padding-bottom: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -234,6 +241,11 @@
     height: 26px;
   }
 }
+
+.hero__link {
+  z-index: 2;
+}
+
 
 .hero__link:hover .hero__icon-further,
 .hero__link:focus .hero__icon-further {
@@ -261,6 +273,7 @@
   width: 171px;
   bottom: 0;
   left: 117px;
+
   @include breakpoint(tablet-to-desktop) {
     width: 143px;
     left: 307px;
@@ -269,8 +282,8 @@
 
   @include breakpoint(desktop) {
     width: 236px;
-      left: 594px;
-    }
+    left: 594px;
+  }
 }
 
 .hero__ice-img::before {
@@ -283,6 +296,27 @@
   background-color: $time;
   border-radius: 50%;
   z-index: -1;
+  animation-name: white-circle;
+  animation-duration: 1000ms, 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 10;
+  animation-direction: reverse;
+
+
+  @keyframes white-circle {
+    0% {
+      color: $slider;
+    }
+
+    50% {
+      border-radius: 45%;
+
+    }
+
+    100% {
+      color: $time;
+    }
+  }
 
   @include breakpoint(mobile) {
     width: 346px;
@@ -327,8 +361,8 @@
 }
 
 .hero__text-min {
-  position: relative;
-   color: $polar;
+
+  color: $polar;
 
   @include breakpoint(tablet-to-desktop) {
     font: normal 400 8px/1.25em 'DM Sans', sans-serif;
@@ -341,7 +375,9 @@
     padding-bottom: 15px;
   }
 }
+
 .hero__text-min--accent {
+  position: relative;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $main;
@@ -351,11 +387,11 @@
   }
 
   &::before {
-     content: '';
+    content: '';
     position: absolute;
-    left: 75%;
-    transform: translateY(-5%);
-    display: block;
+    left: 55%;
+    transform: translate(35%, -15%);
+    display: inline-block;
     background-color: $polar;
     border-radius: 50%;
     z-index: -1;
@@ -381,7 +417,7 @@
     display: flex;
     justify-content: flex-end;
     width: 168px;
-    padding-top: 62px;
+    padding-top: 59px;
   }
 
   @include breakpoint(desktop) {
