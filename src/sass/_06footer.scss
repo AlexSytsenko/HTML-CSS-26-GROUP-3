@@ -24,6 +24,15 @@
 
   text-align: left;
   text-transform: uppercase;
+
+  transform: scale(0.3) translateY(-20%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
 }
 
 .footer__second-title {
@@ -38,29 +47,59 @@
   text-align: left;
   text-transform: uppercase;
 
-  // animation: glow 5s ease-in-out infinite alternate;
+  transform: scale(0.3) translateY(120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+
+  animation: glow 5s ease-in-out infinite alternate;
 }
 
-// @keyframes glow {
-//   from {
-//     text-shadow: 0 0 1px #d41443;
-//   }
-//   to {
-//     text-shadow: 0 0 1px #ffa5ba, 0 0 1px #e18298;
-//   }
-// }
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #e18298;
+  }
+  to {
+    text-shadow: 0 0 50px #ffa5ba, 0 0 40px #e18298;
+  }
+}
 
 .list-footer {
   @include flexbox($jc: flex-end, $ai: stretch, $w: wrap);
   max-width: 230px;
   //   margin-bottom: 46px;
   margin-left: auto;
+  overflow: hidden;
 }
 
 .list-footer__item {
   &:not(:nth-last-child(-n + 2)) {
     margin-right: 28px;
     margin-bottom: 46px;
+  }
+
+  transform: translateX(120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  &:nth-child(4) {
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+
+    &._active {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -127,6 +166,14 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
   text-align: center;
 
   color: $secondary;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @include breakpoint(tablet) {

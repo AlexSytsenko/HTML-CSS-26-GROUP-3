@@ -106,6 +106,22 @@
       margin-right: 30px;
     }
   }
+
+  transform: scale(0.3) translateY(-120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+
+  &:nth-child(2) {
+    transition: all 0.8s ease 0.2s;
+  }
+  &:nth-child(3) {
+    transition: all 0.8s ease 0.4s;
+  }
 }
 
 .locations__caption {
@@ -283,12 +299,30 @@
   &:focus {
     background-color: $btn1-hover;
   }
+
+  transform: scale(0.3) translateX(-120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateX(0px);
+    opacity: 1;
+  }
 }
 
 .button__location--franchise {
   &:hover,
   &:focus {
     background-color: $btn2-hover;
+  }
+
+  transform: scale(0.3) translateX(120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateX(0px);
+    opacity: 1;
   }
 }
 

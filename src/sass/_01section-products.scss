@@ -57,10 +57,28 @@
 
 .products__first-title {
   margin-bottom: 15px;
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 .products__second-title {
   margin-bottom: 144px;
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 .products-list__item {
@@ -80,6 +98,15 @@
   }
   &:not(:last-child) {
     margin-bottom: 130px;
+  }
+
+  transform: scale(0.3) translateY(-120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
   }
 }
 

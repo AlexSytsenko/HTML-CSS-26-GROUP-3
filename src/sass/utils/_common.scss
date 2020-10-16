@@ -158,3 +158,16 @@ h5 {
     }
   }
 }
+
+// Отдельный класс для анимашек
+.anim-show {
+  transform: translate(120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
