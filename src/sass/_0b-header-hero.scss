@@ -5,7 +5,7 @@
   background-position: 50% 50%;
   // max-width: 1600px;
   margin: 0 auto;
-  // min-height: 100vh;
+   min-height: 100vh;
 
   @include breakpoint(mobile-to-tablet) {
     // max-width: 768px;
@@ -297,25 +297,24 @@
   border-radius: 50%;
   z-index: -1;
   animation-name: white-circle;
-  animation-duration: 1000ms, 1000ms;
+  animation-duration: 1500ms, 1500ms;
   animation-timing-function: linear;
   animation-iteration-count: 10;
-  animation-direction: reverse;
+  animation-direction: alternate;
 
 
   @keyframes white-circle {
     0% {
-      color: $slider;
-    }
+      background-image: radial-gradient(circle at center, #ffbd57, #fb5277, $time);
+      }
 
-    50% {
-      border-radius: 45%;
-
-    }
-
+50%{
+  // background-image: radial-gradient(circle at center, $polar, #ffbd57, #fb5277, $time);
+border-radius: 45%;
+}
     100% {
-      color: $time;
-    }
+      background-image: radial-gradient(circle at center, #fb5277, $time);
+      }
   }
 
   @include breakpoint(mobile) {
@@ -342,6 +341,7 @@
 
 .hero__decorate {
   display: none;
+  height: 100vh;
 
   @include breakpoint(tablet-to-desktop) {
     display: flex;
@@ -413,17 +413,21 @@
 }
 
 .hero__tasty {
+  position: absolute;
+   bottom: 0;
   @include breakpoint(tablet-to-desktop) {
     display: flex;
     justify-content: flex-end;
     width: 168px;
-    padding-top: 59px;
+    right: 34px;
   }
 
   @include breakpoint(desktop) {
+    
     display: flex;
     justify-content: flex-end;
     width: 293px;
-    padding-top: 109px;
+    right: 109px;
+   
   }
 }
