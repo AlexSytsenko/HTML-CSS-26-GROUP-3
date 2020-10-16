@@ -25,32 +25,37 @@
     </ul>
   </div>
 
-  <picture>
-    <source
-      srcset="
-        ./images/desktop/collage.jpg    1x,
-        ./images/desktop/collage@2x.jpg 2x
-      "
-      media="(min-width: 1200px)"
-    />
+  <div class="promo__picture-container">
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/collage.jpg    1x,
+          ./images/desktop/collage@2x.jpg 2x
+        "
+        media="(min-width: 1200px)"
+      />
 
-    <source
-      srcset="
-        ./images/desktop/collage.jpg    1x,
-        ./images/desktop/collage@2x.jpg 2x
-      "
-      media="(min-width: 768px)"
-    />
+      <source
+        srcset="
+          ./images/desktop/collage.jpg    1x,
+          ./images/desktop/collage@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
 
-    <source
-      srcset="./images/tablet/collage.jpg 1x, ./images/tablet/collage@2x.jpg 2x"
-      media="(max-width: 767px)"
-    />
+      <source
+        srcset="
+          ./images/tablet/collage.jpg    1x,
+          ./images/tablet/collage@2x.jpg 2x
+        "
+        media="(max-width: 767px)"
+      />
 
-    <img
-      class="promo__collage image"
-      src="./images/mobile/collage.jpg"
-      alt="collage"
-    />
-  </picture>
+      <img
+        class="promo__collage image"
+        src="./images/mobile/collage.jpg"
+        alt="collage"
+      />
+    </picture>
+  </div>
 </section>

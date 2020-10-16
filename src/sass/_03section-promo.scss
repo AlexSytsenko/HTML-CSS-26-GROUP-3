@@ -110,6 +110,16 @@
   }
 }
 
+.promo__picture-container {
+  width: 100%;
+  background-color: #fff5f6;
+
+  @include breakpoint(desktop) {
+    height: 171px;
+    margin-bottom: 259px;
+  }
+}
+
 .promo__collage {
   margin-left: auto;
   margin-right: auto;
