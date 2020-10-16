@@ -3,7 +3,7 @@
   justify-content: normal;
   background-color: $hero-bg;
   background-position: 50% 50%;
- // max-width: 1600px;
+  // max-width: 1600px;
   margin: 0 auto;
 
   @include breakpoint(mobile-to-tablet) {
@@ -14,7 +14,7 @@
   @include breakpoint(tablet-to-desktop) {
     // min-width: 768px;
     height: 399px;
-    // padding: 0 34px;
+  
   }
 
   @include breakpoint(desktop) {
@@ -29,25 +29,28 @@
   align-items: flex-end;
   justify-content: space-between;
   position: relative;
-  
+
   z-index: 1;
 
   @include breakpoint(mobile) {
     align-items: flex-start;
     overflow: hidden;
- padding-left: 20px;
+    padding-left: 6.25%;
+  
   }
 
   @include breakpoint(tablet-to-desktop) {
     align-items: flex-start;
-    padding: 0 34px 0 34px;
-     overflow: visible;
+    padding-right: 4.43%;
+    padding-left: 4.43%;
+        overflow: visible;
   }
 
   @include breakpoint(desktop) {
     align-items: flex-start;
-    padding: 0 109px 0 77px;
-         overflow: visible;
+    padding-right: 8.52%;
+    padding-left: 6%;
+      overflow: visible;
   }
 }
 
@@ -58,19 +61,17 @@
   @include breakpoint(mobile) {
     width: 218px;
     padding-top: 193px;
-   
+
   }
 
   @include breakpoint(tablet-to-desktop) {
     width: 162px;
     padding-top: 102px; // шапка от лого 15px
-   // margin-left: 34px;
   }
 
   @include breakpoint(desktop) {
     width: 315px;
     padding-top: 171px;
-   // margin-left: 77px;
   }
 }
 
@@ -171,12 +172,12 @@
 .hero__milk {
   width: 124px;
   padding-top: 19px;
- // margin-bottom: 28px;
+ 
 
   @include breakpoint(desktop) {
     width: 188px;
-padding-top: 56px;
- //   margin: 56px 33px 45px 0px;
+    padding-top: 56px;
+  
   }
 }
 
@@ -189,7 +190,7 @@ padding-top: 56px;
     display: block;
     width: 114px;
     left: 154px;
-    //  margin-bottom: 59px;
+  
   }
 
   @include breakpoint(desktop) {
@@ -200,7 +201,7 @@ padding-top: 56px;
     width: 200px;
     padding-top: 177px;
     left: 295px;
-    //  margin-bottom: 59px;
+   
   }
 }
 
@@ -212,8 +213,7 @@ padding-top: 56px;
 
   @include breakpoint(desktop) {
     font: normal 400 14px/1.4em 'DM Sans', sans-serif;
-    // margin-top: 414px; //шапка
-    padding-bottom: 20px;
+   padding-bottom: 20px;
   }
 }
 
@@ -232,12 +232,13 @@ padding-top: 56px;
   @include breakpoint(desktop) {
     width: 26px;
     height: 26px;
-  }  
+  }
 }
+
 .hero__link:hover .hero__icon-further,
- .hero__link:focus .hero__icon-further {
-    background-color: $btn1-prod-loc;
-    fill: $btn2-franchise;  
+.hero__link:focus .hero__icon-further {
+  background-color: $btn1-prod-loc;
+  fill: $btn2-franchise;
 }
 
 .hero__icon-arrow {
@@ -260,23 +261,16 @@ padding-top: 56px;
   width: 171px;
   bottom: 0;
   left: 117px;
-
-  // transform: translateX(-50%);
-  // z-index: 1;
-
   @include breakpoint(tablet-to-desktop) {
     width: 143px;
-    // bottom: -13.5%;
     left: 307px;
     transform: translateX(50%);
   }
 
   @include breakpoint(desktop) {
     width: 236px;
-    // bottom: -13.5%;
-    left: 594px;
-    //transform: translateX(-72%);
-  }
+      left: 594px;
+    }
 }
 
 .hero__ice-img::before {
@@ -319,12 +313,7 @@ padding-top: 56px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    // position: absolute;
-    // left: 100%;
-    // bottom: 0;
-    // transform: translateX(220%);
     padding-top: 94px;
-    // margin-right: 34px;
     text-align: right;
   }
 
@@ -334,14 +323,12 @@ padding-top: 56px;
     align-items: flex-end;
     padding-top: 156px;
     text-align: right;
-    }
+  }
 }
 
 .hero__text-min {
-  // display: none;
   position: relative;
- // padding-right: 8px;
-  color: $polar;
+   color: $polar;
 
   @include breakpoint(tablet-to-desktop) {
     font: normal 400 8px/1.25em 'DM Sans', sans-serif;
@@ -354,9 +341,6 @@ padding-top: 56px;
     padding-bottom: 15px;
   }
 }
-
-
-
 .hero__text-min--accent {
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -365,27 +349,26 @@ padding-top: 56px;
   @include breakpoint(tablet-to-desktop) {
     font: normal 400 28px/1.145em 'Titan One', cursive;
   }
-    // margin-bottom: 19px;
-    &::before {
-  // display: none;
-  content: '';
-  position: absolute;
-  left: 75%;
-  transform: translateY(-5%);
-  display: block;
-  background-color: $polar;
-  border-radius: 50%;
-  z-index: -1;
 
-  @include breakpoint(tablet-to-desktop) {
-    width: 16px;
-    height: 16px;
-  }
+  &::before {
+     content: '';
+    position: absolute;
+    left: 75%;
+    transform: translateY(-5%);
+    display: block;
+    background-color: $polar;
+    border-radius: 50%;
+    z-index: -1;
 
-  @include breakpoint(desktop) {
-    width: 30px;
-    height: 30px;
-  }
+    @include breakpoint(tablet-to-desktop) {
+      width: 16px;
+      height: 16px;
+    }
+
+    @include breakpoint(desktop) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   @include breakpoint(desktop) {
@@ -393,23 +376,12 @@ padding-top: 56px;
   }
 }
 
-// .hero__decorate-tasty {
-//   display: none;
-
-//   @include breakpoint(tablet-to-desktop) {
-//     display: flex;
-//   }
-//    @include breakpoint(desktop) {
-//      display: flex;
-//    }
-// }
-
 .hero__tasty {
   @include breakpoint(tablet-to-desktop) {
     display: flex;
     justify-content: flex-end;
     width: 168px;
-   padding-top: 62px;
+    padding-top: 62px;
   }
 
   @include breakpoint(desktop) {
