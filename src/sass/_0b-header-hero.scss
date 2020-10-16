@@ -5,7 +5,7 @@
   background-position: 50% 50%;
   // max-width: 1600px;
   margin: 0 auto;
-   min-height: 100vh;
+  min-height: 100vh;
 
   @include breakpoint(mobile-to-tablet) {
     // max-width: 768px;
@@ -120,7 +120,6 @@
   transform: translateY(-10px);
 }
 
-
 .hero__button {
   font: normal 400 8px/1.25em 'DM Sans', sans-serif;
   min-width: 62.4px;
@@ -193,7 +192,6 @@
 .hero__description {
   display: none;
 
-
   @include breakpoint(tablet-to-desktop) {
     position: absolute;
     display: block;
@@ -246,7 +244,6 @@
   z-index: 2;
 }
 
-
 .hero__link:hover .hero__icon-further,
 .hero__link:focus .hero__icon-further {
   background-color: $btn1-prod-loc;
@@ -285,6 +282,24 @@
     left: 594px;
   }
 }
+// .hero__ice-img:focus {
+//   animation: 0.1s ice ease-out infinite;
+//   @keyframes ice {
+//     0%,
+//     25% {
+//       left: -1px;
+//       top: -1px;
+//       transform: translateX(-4%);
+//     }
+
+//     50%,
+//     100% {
+//       left: 1px;
+//       top: 1px;
+//       transform: translateX(4%);
+//     }
+//   }
+// }
 
 .hero__ice-img::before {
   content: '';
@@ -296,25 +311,75 @@
   background-color: $time;
   border-radius: 50%;
   z-index: -1;
-  animation-name: white-circle;
-  animation-duration: 1500ms, 1500ms;
+  animation-name: pink-circle;
+  animation-duration: 2500ms, 2500ms;
   animation-timing-function: linear;
   animation-iteration-count: 10;
   animation-direction: alternate;
+  animation-delay: 0.5s;
 
-
-  @keyframes white-circle {
+  @keyframes pink-circle {
     0% {
-      background-image: radial-gradient(circle at center, #ffbd57, #fb5277, $time);
-      }
-
-50%{
-  // background-image: radial-gradient(circle at center, $polar, #ffbd57, #fb5277, $time);
-border-radius: 45%;
-}
+      background-image: radial-gradient(
+        circle at center,
+        #e03f5b,
+        #e03f5b,
+        #fb5277,
+        #fb5277,
+        $time,
+        $time,
+        $time
+      );
+    }
+    25% {
+      background-image: radial-gradient(
+        circle at center,
+        #e03f5b,
+        #fb5277,
+        #fb5277,
+        #fb5277,
+        $time,
+        $time,
+        $time
+      );
+    }
+    50% {
+      background-image: radial-gradient(
+        circle at center,
+        #fb5277,
+        #fb5277,
+        #fb5277,
+        $time,
+        $time,
+        $time,
+        $time
+      );
+      border-radius: 45%;
+    }
+    75% {
+      background-image: radial-gradient(
+        circle at center,
+        #fb5277,
+        #fb5277,
+        $time,
+        $time,
+        $time,
+        $time,
+        $time
+      );
+    }
     100% {
-      background-image: radial-gradient(circle at center, #fb5277, $time);
-      }
+      background-image: radial-gradient(
+        circle at center,
+        #fb5277,
+        $time,
+        $time,
+        $time,
+        $time,
+        $time,
+        $time
+      );
+    }
   }
 
   @include breakpoint(mobile) {
@@ -361,7 +426,6 @@ border-radius: 45%;
 }
 
 .hero__text-min {
-
   color: $polar;
 
   @include breakpoint(tablet-to-desktop) {
@@ -414,7 +478,7 @@ border-radius: 45%;
 
 .hero__tasty {
   position: absolute;
-   bottom: 0;
+  bottom: 0;
   @include breakpoint(tablet-to-desktop) {
     display: flex;
     justify-content: flex-end;
@@ -423,11 +487,9 @@ border-radius: 45%;
   }
 
   @include breakpoint(desktop) {
-    
     display: flex;
     justify-content: flex-end;
     width: 293px;
     right: 109px;
-   
   }
 }
