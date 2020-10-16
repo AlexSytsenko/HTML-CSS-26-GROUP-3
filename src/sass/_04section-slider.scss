@@ -12,7 +12,7 @@
   z-index: 5;
 
   &._active {
-    animation: crescendo 1s alternate ease 1s;
+    animation: crescendo 1s alternate ease 0.5s;
   }
 }
 

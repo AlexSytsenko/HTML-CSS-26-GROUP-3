@@ -63,6 +63,14 @@
 .promo__item._active {
   opacity: 1;
   transform: rotate(0) scale(1);
+
+  &:nth-child(2) {
+    transition: all 0.8s ease 0.2s;
+  }
+
+  &:nth-child(3) {
+    transition: all 0.8s ease 0.4s;
+  }
 }
 
 .promo__item::before {
