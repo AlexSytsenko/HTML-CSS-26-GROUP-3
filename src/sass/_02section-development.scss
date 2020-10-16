@@ -6,7 +6,7 @@
   background-position-y: 80%;
   background-repeat: no-repeat;
 
-@include breakpoint(mobile) {
+  @include breakpoint(mobile) {
     background-image: url('../images/mobile/section2/milkbg.png');
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -24,7 +24,6 @@
       background-image: url('../images/desktop/section2/milkbg@2x.png');
     }
   }
-
 }
 
 .development__container {
@@ -34,8 +33,8 @@
   width: 100%;
 
   @include breakpoint(tablet-to-desktop) {
-   padding-top: 130px;
-   padding-bottom: 66px;
+    padding-top: 130px;
+    padding-bottom: 66px;
   }
 }
 
@@ -45,6 +44,15 @@
   @include breakpoint(tablet-to-desktop) {
     margin-bottom: 16px;
   }
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.development__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .development__subtitle {
@@ -54,16 +62,24 @@
     margin-bottom: 50px;
   }
 
-    @include breakpoint(desktop) {
+  @include breakpoint(desktop) {
     margin-bottom: 55px;
   }
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.development__subtitle._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .development__image {
   @include breakpoint(until-tablet) {
-  margin-bottom: 46px;
-   }
-
+    margin-bottom: 46px;
+  }
 }
 
 .development__flexbox {
@@ -72,7 +88,7 @@
     align-items: flex-start;
   }
 
-    @include breakpoint(tablet) {
+  @include breakpoint(tablet) {
     align-items: center;
   }
 }
@@ -80,14 +96,13 @@
 .development__description {
   display: flex;
   flex-direction: column;
-@include breakpoint(tablet-to-desktop) {
-  margin-left: 17px;
-}
+  @include breakpoint(tablet-to-desktop) {
+    margin-left: 17px;
+  }
 
-@include breakpoint(desktop) {
-  margin-left: 74px;
-}
-
+  @include breakpoint(desktop) {
+    margin-left: 74px;
+  }
 }
 
 .development__text {
@@ -103,9 +118,18 @@
     font-size: 14px;
     line-height: 1.76;
   }
-   @include breakpoint(desktop) {
+  @include breakpoint(desktop) {
     font-size: 16px;
   }
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.development__text._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.4s;
 }
 
 .development__text--part-one {
@@ -113,21 +137,21 @@
   margin-bottom: 20px;
 
   @include breakpoint(tablet-to-desktop) {
-  margin-bottom: 40px;
-}
+    margin-bottom: 40px;
+  }
 }
 
 .development__text--part-two {
   color: $secondary;
   margin-bottom: 26px;
 
-@include breakpoint(tablet-to-desktop) {
-  margin-bottom: 62px;
-}
+  @include breakpoint(tablet-to-desktop) {
+    margin-bottom: 62px;
+  }
 
-@include breakpoint(desktop) {
-  margin-bottom: 32px;
-}
+  @include breakpoint(desktop) {
+    margin-bottom: 32px;
+  }
 }
 
 .development__button {
@@ -165,4 +189,38 @@
   content: '\003E';
   margin-left: 14px;
   color: $btn1-prod-loc;
+}
+
+.text__item {
+  overflow: hidden;
+}
+
+.anim-show {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.development__description {
+  &.active {
+    div {
+      @for $var from 1 to 3 {
+        $delay: $var * 0.2;
+        &: nth-child(#{$var}) {
+          if $var==1 {
+            transition: transform 0.8s ease 0s;}
+            @else {
+              transition: transform 0.8s ease #{$delay + s}
+            }
+          }
+        }
+      }
+    }
+  }
 }
