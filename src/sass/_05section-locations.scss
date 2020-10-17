@@ -135,14 +135,14 @@
 
   &:hover::before,
   &:focus::before {
-    left: 50px;
+    left: 200px;
     top: 100%;
     transition: 350ms;
   }
 
   &:hover::after,
   &:focus::after {
-    left: 50px;
+    left: 200px;
     top: 100%;
     transition: 300ms 100ms;
   }
