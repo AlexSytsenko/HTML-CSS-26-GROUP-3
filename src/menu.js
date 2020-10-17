@@ -12,3 +12,12 @@
     mobileMenuRef.classList.toggle('is-open');
   });
 })();
+
+// $('body').click(function (event) {
+//   if (
+//     !$(event.target).closest('.header__button').length &&
+//     !$(event.target).is('.header__button')
+//   ) {
+//     $('.is-open').hide();
+//   }
+// });
