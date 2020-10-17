@@ -117,24 +117,52 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"menu.js":[function(require,module,exports) {
+})({"gallery.js":[function(require,module,exports) {
 (function () {
-  var menuBtnRef = document.querySelector('[data-menu-button]');
-  var mobileMenuRef = document.querySelector('[data-menu]');
-  menuBtnRef.addEventListener('click', function () {
-    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
-    menuBtnRef.classList.toggle('is-open');
-    menuBtnRef.getAttribute('aria-expanded', !expanded);
-    mobileMenuRef.classList.toggle('is-open');
+  var mobileGalmenuRef = document.querySelector('[data-gallery]');
+  var inputs = document.querySelectorAll('input[type=checkbox]');
+
+  function check() {
+    inputs.forEach(function (input) {
+      if (input.checked) mobileGalmenuRef.classList.toggle('type-one');else {
+        mobileGalmenuRef.classList.toggle('type-one');
+      }
+    });
+  }
+
+  inputs.forEach(function (input) {
+    return input.addEventListener('change', check);
   });
-})(); // $('body').click(function (event) {
-//   if (
-//     !$(event.target).closest('.header__button').length &&
-//     !$(event.target).is('.header__button')
-//   ) {
-//     $('.is-open').hide();
-//   }
+})(); // (() => {
+//   const toggleRef = document.querySelector('[data-toggle]');
+//   toggleRef.addEventListener('click', () => {
+//     toggleRef.classList.toggle('_toggled');
+//   });
+//   inputs.forEach(input => input.addEventListener('change', check));
+// })();
+// $(document).ready(function () {
+//   $('.switch__info').click(function () {
+//     $('p').toggleClass('main');
+//   });
 // });
+
+
+(function () {
+  var toggleRef = document.querySelector('[data-toggle]');
+  var inputs = document.querySelectorAll('input[type=checkbox]');
+
+  function check() {
+    inputs.forEach(function (input) {
+      if (input.checked) toggleRef.classList.toggle('toggled');else {
+        toggleRef.classList.toggle('toggled');
+      }
+    });
+  }
+
+  inputs.forEach(function (input) {
+    return input.addEventListener('change', check);
+  });
+})();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -339,5 +367,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","menu.js"], null)
-//# sourceMappingURL=/menu.234110a1.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","gallery.js"], null)
+//# sourceMappingURL=/gallery.9a8aea70.js.map
