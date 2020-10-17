@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://MaximRight.github.io/HTML-CSS-26-GROUP-3",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url=/parcel-project-template/",
+    "predeploy": "npm run build -- --public-url=/HTML-CSS-26-GROUP-3/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
