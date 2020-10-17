@@ -634,11 +634,6 @@ input:checked + .switch__slider:before {
   }
   .gallery {
     display: flex;
-    // position: relative;
-    // animation: crescendo 1s alternate ease 0.1s;
-    // transform: scale(1);
-    // opacity: 1;
-    // pointer-events: all;
   }
 }
 
@@ -646,6 +641,7 @@ input:checked + .switch__slider:before {
   .promo__picture-container {
     // display: block;
     position: relative;
+
     transform: scale(1);
     animation: crescendo 1s alternate ease 0.1s;
 
@@ -655,10 +651,6 @@ input:checked + .switch__slider:before {
 
   .gallery {
     display: none;
-    // position: absolute;
-    // transform: scale(0);
-    // opacity: 0;
-    // pointer-events: none;
   }
 }
 
