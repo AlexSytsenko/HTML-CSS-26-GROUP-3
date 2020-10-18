@@ -21,8 +21,8 @@
             ./images/desktop/bio.png    188w,
             ./images/desktop/bio@2x.png 376w
           "
-          sizes="(min-width: 1200px) 188w, 
-               (min-width: 768px) 124w"
+          sizes="(min-width: 1200px) 188px,
+               (min-width: 768px) 124px"
           src="./images/tablet/bio.png"
           alt="photo"
           class="img"
@@ -45,6 +45,34 @@
     </div>
     <div class="hero__ice">
       <picture class="hero__ice-img">
+        <source
+          srcset="
+            ./images/mobile/heroice.png    1x,
+            ./images/mobile/heroice@2x.png 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="
+            ./images/desktop/heroice.png    1x,
+            ./images/desktop/heroice@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/tablet/heroice.png    1x,
+            ./images/tablet/heroice@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img
+          class="img"
+          src="./images/mobile/heroice.png"
+          alt="big ice cream"
+        />
+      </picture>
+      <!-- <picture class="hero__ice-img">
         <img
           srcset="
             ./images/mobile/heroice.png     171w,
@@ -54,13 +82,13 @@
             ./images/desktop/heroice.png    236w,
             ./images/desktop/heroice@2x.png 472w
           "
-          sizes="(min-width: 1280px) 236w, 
-               (min-width: 768px) 143w, (min-width: 320px) 171w"
+          sizes="(min-width: 1280px) 236px,
+               (min-width: 768px) 143px, (min-width: 320px) 171px"
           src="./images/mobile/heroice.png"
           alt="photo"
           class="img"
         />
-      </picture>
+      </picture> -->
     </div>
     <div class="hero__decorate">
       <!-- <div class="hero__decorate-up"> -->
@@ -81,8 +109,8 @@
               ./images/desktop/tasty.png    293w,
               ./images/desktop/tasty@2x.png 586w
             "
-            sizes="(min-width: 1200px) 293w, 
-               (min-width: 768px) 168w, 
+            sizes="(min-width: 1200px) 293px,
+               (min-width: 768px) 168px,
                100vw"
             src="./images/tablet/tasty.png"
             alt="photo"

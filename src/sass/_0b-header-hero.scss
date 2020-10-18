@@ -5,20 +5,18 @@
   background-position: 50% 50%;
   // max-width: 1600px;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 502px;
 
   @include breakpoint(mobile-to-tablet) {
     // max-width: 768px;
-    min-height: 100vh;
   }
 
   @include breakpoint(tablet-to-desktop) {
-    // min-width: 768px;
-    max-height: 399px;
+    height: 399px;
   }
 
   @include breakpoint(desktop) {
-    max-height: 665px;
+    height: 665px;
   }
 }
 
@@ -26,16 +24,15 @@
   // @include flexbox;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   position: relative;
-
+  padding-left: 6.25%;
   z-index: 1;
 
-  @include breakpoint(mobile) {
+  @include breakpoint(until-tablet) {
     align-items: flex-start;
     overflow: hidden;
-    padding-left: 6.25%;
   }
 
   @include breakpoint(tablet-to-desktop) {
@@ -56,6 +53,8 @@
 .hero__position {
   display: block;
   z-index: 1;
+  width: 218px;
+  padding-top: 193px;
 
   @include breakpoint(mobile) {
     width: 218px;
@@ -280,65 +279,35 @@
 }
 
 .hero__ice {
-  display: flex;
-  z-index: -1;
-}
-
-.hero__ice-img {
   position: absolute;
   width: 171px;
+  // max-height: 410px;
   bottom: 0;
-  left: 117px;
+  left: 36.56vw;
+  z-index: -1;
 
   @include breakpoint(tablet-to-desktop) {
     width: 143px;
-    left: 307px;
-    transform: translateX(50%);
+    // max-height: 336px;
+    left: 49.21%;
+    bottom: 0;
   }
-
   @include breakpoint(desktop) {
     width: 236px;
-    left: 594px;
+    // max-height: 557px;
+    left: 46.4%;
+    bottom: 0;
   }
+}
+
+.hero__ice-img {
+  position: relative;
+  display: block;
+  height: 100%;
 }
 .hero__ice-img:hover {
   animation-name: shake-slow;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-}
-
-
-@keyframes shake-slow {
-  2% {
-    transform: translate(1px, 7px) rotate(-1.5deg)
-  }
-
-  4% {
-    transform: translate(6px, -6px) rotate(-1.5deg)
-  }
-
-  6% {
-    transform: translate(5px, 4px) rotate(0.5deg)
-  }
-
-  8% {
-    transform: translate(10px, -7px) rotate(2.5deg)
-  }
-
-  10% {
-    transform: translate(-6px, 10px) rotate(2.5deg)
-  }
-
-  12% {
-    transform: translate(-6px, -6px) rotate(-0.5deg)
-  }
-}
-.hero__ice-img:hover {
-  animation-name: shake-slow;
-  animation-duration: 5s;
-  // animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
 }
@@ -631,7 +600,7 @@
     }
   }
 
-  @include breakpoint(mobile) {
+  @include breakpoint(until-tablet) {
     width: 346px;
     height: 346px;
     bottom: 46px;
@@ -640,9 +609,11 @@
   @include breakpoint(tablet-to-desktop) {
     width: 324px;
     height: 324px;
-    bottom: 46px;
+
+    bottom: 46;
     left: 71px;
-    transform: translateX(-40%);
+
+    // transform: translateX(-4%);
   }
 
   @include breakpoint(desktop) {
@@ -694,9 +665,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $main;
-  &:hover {
- text-shadow: 1px 1px 1px black, 0 0 1em $polar;
-  }
 
   &:hover {
     text-shadow: 1px 1px 1px black, 0 0 1em $polar;
@@ -704,9 +672,7 @@
 
   @include breakpoint(tablet-to-desktop) {
     font: normal 400 28px/1.145em 'Titan One', cursive;
-
   }
-  
 
   &::before {
     content: '';
@@ -717,7 +683,6 @@
     background-color: $polar;
     border-radius: 50%;
     z-index: -1;
-   
 
     @include breakpoint(tablet-to-desktop) {
       width: 16px;
@@ -728,13 +693,11 @@
       width: 30px;
       height: 30px;
     }
-    
   }
 
   @include breakpoint(desktop) {
     font: normal 400 46px/1.15em 'Titan One', cursive;
   }
-
 }
 .hero__tasty--overflow {
   position: absolute;
@@ -767,5 +730,48 @@
     justify-content: flex-end;
     width: 293px;
     right: 109px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .hero__decorate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 94px;
+    text-align: right;
+  }
+  .hero__text-min {
+    display: none;
+  }
+  .hero__tasty {
+    display: flex;
+    justify-content: flex-end;
+    width: 168px;
+    height: 133px;
+    right: 34px;
+  }
+
+  .hero__text-min {
+    display: block;
+    font: normal 400 8px/1.25em 'DM Sans', sans-serif;
+    letter-spacing: 0.04em;
+    padding-bottom: 13px;
+  }
+
+  .hero__text-min--accent {
+    font: normal 400 28px/1.145em 'Titan One', cursive;
+  }
+
+  .hero__text-min--accent::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero__flex {
+    align-items: flex-start;
+    padding-right: 4.43%;
+    padding-left: 4.43%;
+    overflow: visible;
   }
 }

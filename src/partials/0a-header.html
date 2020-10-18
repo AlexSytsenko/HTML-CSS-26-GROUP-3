@@ -1,5 +1,5 @@
 <div class="container__relative">
-  <header class="header">
+  <header id="header" class="header">
     <a href="./index.html" class="logo">
       <img
         class="logo__img"
@@ -9,28 +9,44 @@
         height="50"
       />
     </a>
-    <div class="header__burger header__flexbox" id="burger" data-menu>
+    <div
+      class="header__burger header__flexbox"
+      id="burger"
+      data-menu
+      data2-menu
+    >
       <button class="button flexbox burger__btn burger__btn--tab" type="button">
         Buy now
       </button>
       <nav class="navigation">
         <ul class="list header__flexbox navigation__list">
           <li class="navigation__item">
-            <a href="./" class="link navigation__link navigation__link--current"
+            <a
+              href="#header"
+              class="link navigation__link navigation__link--current"
+              data-menu-link
               >Home</a
             >
           </li>
           <li class="navigation__item">
-            <a href="./" class="link navigation__link">About us</a>
+            <a href="#promo" class="link navigation__link" data-menu-link
+              >About us</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="./" class="link navigation__link">How it’s made?</a>
+            <a href="#development" class="link navigation__link" data-menu-link
+              >How it’s made?</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="./" class="link navigation__link">Our products</a>
+            <a href="#products" class="link navigation__link" data-menu-link
+              >Our products</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="./" class="link navigation__link">Contact</a>
+            <a href="#locations" class="link navigation__link" data-menu-link
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
@@ -38,8 +54,16 @@
     <button class="button flexbox burger__btn burger__btn--desk" type="button">
       Buy now
     </button>
-    <button type="button" class="header__button flexbox" data-menu-button>
-      <svg
+    <button
+      type="button"
+      class="header__button flexbox"
+      data-menu-button
+      data2-menu-button
+      aria-label="open and close menu button"
+    >
+      <span class="fa fa-times header__button--cross" aria-hidden="true"></span>
+      <span class="fa fa-bars header__button--menu" aria-hidden="true"></span>
+      <!-- <svg
         viewbox="0 0 64 64"
         class="header__button--cross"
         width="24"
@@ -67,6 +91,7 @@
           stroke-width="4"
         />
       </svg>
+
       <svg
         fill="none"
         stroke-linecap="round"
@@ -81,7 +106,7 @@
         aria-label="Mobile menu switcher"
       >
         <path class="header__button--menu" d="M4 8h24M4 16h24M4 24h24" />
-      </svg>
+      </svg> -->
     </button>
   </header>
   <script src="./menu.js"></script>

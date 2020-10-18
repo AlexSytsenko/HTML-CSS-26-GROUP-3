@@ -82,8 +82,6 @@
     // transform: scale(1.05);
   }
 
-  
-
   @include breakpoint(until-tablet) {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -122,27 +120,26 @@
     background-color: rgba(136, 116, 119, 0.5);
     filter: blur(60px);
     transform: skewX(-45deg);
-    
+
     @include breakpoint(tablet) {
-       
-    top: -400px;
-    width: 10px;
-    height: 100%;
-    background-color: rgba(136, 116, 119, 0.5);
-    filter: blur(70px);
+      top: -400px;
+      width: 10px;
+      height: 100%;
+      background-color: rgba(136, 116, 119, 0.5);
+      filter: blur(70px);
     }
   }
 
   &:hover::before,
   &:focus::before {
-    left: 50px;
+    left: 200px;
     top: 100%;
     transition: 350ms;
   }
 
   &:hover::after,
   &:focus::after {
-    left: 50px;
+    left: 200px;
     top: 100%;
     transition: 300ms 100ms;
   }
@@ -163,7 +160,6 @@
     transition: all 0.8s ease 0.4s;
   }
 }
-
 
 .locations__caption {
   display: inline-block;
@@ -322,6 +318,10 @@
   cursor: pointer;
 }
 
+.locations-button-list span {
+  text-align: center;
+}
+
 .button__location--locations {
   margin-bottom: 10px;
   background-color: $btn1-prod-loc;
@@ -331,38 +331,46 @@
     color: $polar;
   }
 
+  /*переливание кнопки*/
+
+
+
+
+
   @include breakpoint(tablet) {
     margin-bottom: 0;
     margin-right: 15px;
   }
 
-  &:hover,
-  &:focus {
-    background-color: $btn1-hover;
-  }
-
   transform: scale(0.3) translateX(-120%);
   opacity: 0;
-  transition: all 0.8s ease 0s;
+  transition: all $tt $tf 0s;
 
   &._active {
     transform: scale(1) translateX(0px);
     opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    background-color: $btn1-hover;
   }
 }
 
 .button__location--franchise {
-  &:hover,
-  &:focus {
-    background-color: $btn2-hover;
-  }
-
   transform: scale(0.3) translateX(120%);
   opacity: 0;
-  transition: all 0.8s ease 0s;
+  transition: all $tt $tf 0s;
 
   &._active {
     transform: scale(1) translateX(0px);
     opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    background-color: $btn2-hover;
   }
 }
