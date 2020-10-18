@@ -1,3 +1,5 @@
+// Скрипт кнопки Вверх
+
 var btn = $('#top__button');
 
 $(window).scroll(function () {
@@ -12,6 +14,8 @@ btn.on('click', function (e) {
   e.preventDefault();
   $('html, body').animate({ scrollTop: 0 }, '300');
 });
+
+// Скрипт Анимаций по скроллу
 
 const animItems = document.querySelectorAll('._anim-items');
 
@@ -53,6 +57,8 @@ if (animItems.length > 0) {
   }, 300);
 }
 
+// Скрипт Masonry
+
 import Masonry from 'masonry-layout';
 window.onload = () => {
   const grid = document.querySelector('.grid');
@@ -68,8 +74,32 @@ window.onload = () => {
 
 // $('.gallery-container').masonry({ isFitWidth: true });
 
+// Скрипт плавного скролла
+
+// (() => {
+//   const menuLinkRef = document.querySelector('[data-menu-link]');
+//   const mobileMenuRef = document.querySelector('[data2-menu]');
+//   const menuBtnRef = document.querySelector('[data2-menu-button]');
+
+//   menuLinkRef.addEventListener('click', () => {
+//     // const expanded =
+//     //   menuLinkRef.getAttribute('aria-expanded') === 'true' || false;
+
+//     // menuLinkRef.classList.toggle('is-open');
+//     // menuLinkRef.getAttribute('aria-expanded', !expanded);
+
+//     mobileMenuRef.classList.toggle('is-open');
+//     menuBtnRef.classList.toggle('is-open');
+//   });
+// })();
+
 $('a[href*="#"]').on('click', function (e) {
   e.preventDefault();
+
+  const mobileMenuRef = document.querySelector('[data2-menu]');
+  const menuBtnRef = document.querySelector('[data2-menu-button]');
+  mobileMenuRef.classList.toggle('is-open');
+  menuBtnRef.classList.toggle('is-open');
 
   $('html, body').animate(
     {

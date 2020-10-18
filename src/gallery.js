@@ -12,21 +12,6 @@
   inputs.forEach(input => input.addEventListener('change', check));
 })();
 
-// (() => {
-//   const toggleRef = document.querySelector('[data-toggle]');
-
-//   toggleRef.addEventListener('click', () => {
-//     toggleRef.classList.toggle('_toggled');
-//   });
-//   inputs.forEach(input => input.addEventListener('change', check));
-// })();
-
-// $(document).ready(function () {
-//   $('.switch__info').click(function () {
-//     $('p').toggleClass('main');
-//   });
-// });
-
 (() => {
   const toggleRef = document.querySelector('[data-toggle]');
   const inputs = document.querySelectorAll('input[type=checkbox]');

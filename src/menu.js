@@ -13,11 +13,26 @@
   });
 })();
 
-// $('body').click(function (event) {
-//   if (
-//     !$(event.target).closest('.header__button').length &&
-//     !$(event.target).is('.header__button')
-//   ) {
-//     $('.is-open').hide();
+// $(document).mouseup(function (e) {
+//   var container = $('#burger');
+//   if (container.has(e.target).length === 0) {
+//     container.hide();
 //   }
 // });
+
+// var menu = document.getElementsByClassName('#burger')[0];
+
+// // Menu Close
+// function menuClose() {
+//   menu.classList.remove('.is-open');
+// }
+
+// // Menu Close Click Outside
+// function menuCloseClickOutside(e) {
+//   if (!e.target.matches('#burger, #burger *')) {
+//     menuClose();
+//   }
+// }
+
+// document.addEventListener('click', menuCloseClickOutside);
+// document.addEventListener('touchstart', menuCloseClickOutside);

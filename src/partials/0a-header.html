@@ -9,7 +9,12 @@
         height="50"
       />
     </a>
-    <div class="header__burger header__flexbox" id="burger" data-menu>
+    <div
+      class="header__burger header__flexbox"
+      id="burger"
+      data-menu
+      data2-menu
+    >
       <button class="button flexbox burger__btn burger__btn--tab" type="button">
         Buy now
       </button>
@@ -19,22 +24,29 @@
             <a
               href="#header"
               class="link navigation__link navigation__link--current"
+              data-menu-link
               >Home</a
             >
           </li>
           <li class="navigation__item">
-            <a href="#promo" class="link navigation__link">About us</a>
+            <a href="#promo" class="link navigation__link" data-menu-link
+              >About us</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="#development" class="link navigation__link"
+            <a href="#development" class="link navigation__link" data-menu-link
               >How it’s made?</a
             >
           </li>
           <li class="navigation__item">
-            <a href="#products" class="link navigation__link">Our products</a>
+            <a href="#products" class="link navigation__link" data-menu-link
+              >Our products</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="#locations" class="link navigation__link">Contact</a>
+            <a href="#locations" class="link navigation__link" data-menu-link
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
@@ -42,7 +54,12 @@
     <button class="button flexbox burger__btn burger__btn--desk" type="button">
       Buy now
     </button>
-    <button type="button" class="header__button flexbox" data-menu-button>
+    <button
+      type="button"
+      class="header__button flexbox"
+      data-menu-button
+      data2-menu-button
+    >
       <span class="fa fa-times header__button--cross" aria-hidden="true"></span>
       <span class="fa fa-bars header__button--menu" aria-hidden="true"></span>
       <!-- <svg
