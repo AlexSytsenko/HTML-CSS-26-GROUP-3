@@ -2122,6 +2122,7 @@ img {
 
 .switch__info-masonry {
   display: block;
+  color: #f0d1a5;
   animation: crescendo 1s alternate ease 0.1s;
 }
 .switch__info .switch__info-flex {

@@ -2564,7 +2564,7 @@ window.onload = function () {
 // Скрипт плавного скролла
 
 
-$('a[href*="#"]').on('click', function (e) {
+$('a[href*="#menu"]').on('click', function (e) {
   e.preventDefault();
   var mobileMenuRef = document.querySelector('[data2-menu]');
   var menuBtnRef = document.querySelector('[data2-menu-button]');
@@ -2602,7 +2602,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55396" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58723" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
