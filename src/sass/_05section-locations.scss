@@ -323,6 +323,8 @@
 }
 
 .button__location--locations {
+  position: relative;
+  overflow: hidden;
   margin-bottom: 10px;
   background-color: $btn1-prod-loc;
   color: $polar;
@@ -331,6 +333,28 @@
     color: $polar;
   }
 
+  /*переливание кнопки*/
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20%;
+    width: 1.5em;
+    height: 100%;
+    background-color: rgba(#fff, 0.5);
+    filter: blur(5px);
+    transform: skewX(-45deg);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    left: 110%;
+    transition: 250ms;
+  }
+
+
+
+
   @include breakpoint(tablet) {
     margin-bottom: 0;
     margin-right: 15px;
@@ -338,7 +362,8 @@
 
   &:hover,
   &:focus {
-    background-color: $btn1-hover;
+    // background-color: $btn1-hover;
+    filter: brightness(1.2);
   }
 
   transform: scale(0.3) translateX(-120%);
