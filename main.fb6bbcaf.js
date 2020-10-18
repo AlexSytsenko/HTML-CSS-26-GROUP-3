@@ -2491,6 +2491,7 @@ var _masonryLayout = _interopRequireDefault(require("masonry-layout"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Скрипт кнопки Вверх
 var btn = $('#top__button');
 $(window).scroll(function () {
   if ($(window).scrollTop() > 2420) {
@@ -2504,7 +2505,8 @@ btn.on('click', function (e) {
   $('html, body').animate({
     scrollTop: 0
   }, '300');
-});
+}); // Скрипт Анимаций по скроллу
+
 var animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -2545,7 +2547,8 @@ if (animItems.length > 0) {
   setTimeout(function () {
     animOnScroll();
   }, 300);
-}
+} // Скрипт Masonry
+
 
 window.onload = function () {
   var grid = document.querySelector('.grid');
@@ -2558,10 +2561,15 @@ window.onload = function () {
     fitWidth: true
   });
 }; // $('.gallery-container').masonry({ isFitWidth: true });
+// Скрипт плавного скролла
 
 
 $('a[href*="#"]').on('click', function (e) {
   e.preventDefault();
+  var mobileMenuRef = document.querySelector('[data2-menu]');
+  var menuBtnRef = document.querySelector('[data2-menu-button]');
+  mobileMenuRef.classList.toggle('is-open');
+  menuBtnRef.classList.toggle('is-open');
   $('html, body').animate({
     scrollTop: $($(this).attr('href')).offset().top
   }, 500, 'linear');
@@ -2594,7 +2602,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60141" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55235" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
