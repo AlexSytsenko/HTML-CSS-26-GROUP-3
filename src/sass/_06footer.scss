@@ -323,7 +323,8 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
   visibility: visible;
 }
 
-#top__button:hover {
+#top__button:hover,
+#top__button:focus {
   cursor: pointer;
   background-color: $sub-title;
   opacity: 1;

@@ -5,20 +5,18 @@
   background-position: 50% 50%;
   // max-width: 1600px;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 502px;
 
   @include breakpoint(mobile-to-tablet) {
     // max-width: 768px;
-    min-height: 100vh;
   }
 
   @include breakpoint(tablet-to-desktop) {
-    // min-width: 768px;
-    max-height: 399px;
+    height: 399px;
   }
 
   @include breakpoint(desktop) {
-    max-height: 665px;
+    height: 665px;
   }
 }
 
@@ -26,16 +24,15 @@
   // @include flexbox;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   position: relative;
-
+  padding-left: 6.25%;
   z-index: 1;
 
   @include breakpoint(mobile) {
     align-items: flex-start;
     overflow: hidden;
-    padding-left: 6.25%;
   }
 
   @include breakpoint(tablet-to-desktop) {
@@ -56,6 +53,8 @@
 .hero__position {
   display: block;
   z-index: 1;
+  width: 218px;
+  padding-top: 193px;
 
   @include breakpoint(mobile) {
     width: 218px;
@@ -280,50 +279,35 @@
 }
 
 .hero__ice {
-  display: flex;
-  z-index: -1;
-}
-
-.hero__ice-img {
   position: absolute;
   width: 171px;
+  // max-height: 410px;
   bottom: 0;
-  left: 117px;
+  left: 36.56vw;
+  z-index: -1;
 
   @include breakpoint(tablet-to-desktop) {
     width: 143px;
-    left: 307px;
-    transform: translateX(50%);
+    // max-height: 336px;
+    left: 49.21%;
+    bottom: 0;
   }
-
   @include breakpoint(desktop) {
     width: 236px;
-    left: 594px;
+    // max-height: 557px;
+    left: 46.4%;
+    bottom: 0;
   }
 }
-// .hero__ice-img:focus {
-//   animation: 0.1s ice ease-out infinite;
-//   @keyframes ice {
-//     0%,
-//     25% {
-//       left: -1px;
-//       top: -1px;
-//       transform: translateX(-4%);
-//     }
 
-//     50%,
-//     100% {
-//       left: 1px;
-//       top: 1px;
-//       transform: translateX(4%);
-//     }
-//   }
-// }
-
+.hero__ice-img {
+  position: relative;
+  display: block;
+  height: 100%;
+}
 .hero__ice-img:hover {
   animation-name: shake-slow;
   animation-duration: 5s;
-  // animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
 }
@@ -625,9 +609,11 @@
   @include breakpoint(tablet-to-desktop) {
     width: 324px;
     height: 324px;
-    bottom: 46px;
+
+    bottom: 46;
     left: 71px;
-    transform: translateX(-40%);
+
+    // transform: translateX(-4%);
   }
 
   @include breakpoint(desktop) {
