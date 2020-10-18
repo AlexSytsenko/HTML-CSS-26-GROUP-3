@@ -76,23 +76,6 @@ window.onload = () => {
 
 // Скрипт плавного скролла
 
-// (() => {
-//   const menuLinkRef = document.querySelector('[data-menu-link]');
-//   const mobileMenuRef = document.querySelector('[data2-menu]');
-//   const menuBtnRef = document.querySelector('[data2-menu-button]');
-
-//   menuLinkRef.addEventListener('click', () => {
-//     // const expanded =
-//     //   menuLinkRef.getAttribute('aria-expanded') === 'true' || false;
-
-//     // menuLinkRef.classList.toggle('is-open');
-//     // menuLinkRef.getAttribute('aria-expanded', !expanded);
-
-//     mobileMenuRef.classList.toggle('is-open');
-//     menuBtnRef.classList.toggle('is-open');
-//   });
-// })();
-
 $('a[href*="#"]').on('click', function (e) {
   e.preventDefault();
 
