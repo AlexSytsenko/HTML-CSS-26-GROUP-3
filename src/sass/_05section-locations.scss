@@ -82,8 +82,6 @@
     // transform: scale(1.05);
   }
 
-  
-
   @include breakpoint(until-tablet) {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -122,14 +120,13 @@
     background-color: rgba(136, 116, 119, 0.5);
     filter: blur(60px);
     transform: skewX(-45deg);
-    
+
     @include breakpoint(tablet) {
-       
-    top: -400px;
-    width: 10px;
-    height: 100%;
-    background-color: rgba(136, 116, 119, 0.5);
-    filter: blur(70px);
+      top: -400px;
+      width: 10px;
+      height: 100%;
+      background-color: rgba(136, 116, 119, 0.5);
+      filter: blur(70px);
     }
   }
 
@@ -163,7 +160,6 @@
     transition: all 0.8s ease 0.4s;
   }
 }
-
 
 .locations__caption {
   display: inline-block;
