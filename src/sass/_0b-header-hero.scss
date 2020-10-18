@@ -30,7 +30,7 @@
   padding-left: 6.25%;
   z-index: 1;
 
-  @include breakpoint(mobile) {
+  @include breakpoint(until-tablet) {
     align-items: flex-start;
     overflow: hidden;
   }
@@ -600,7 +600,7 @@
     }
   }
 
-  @include breakpoint(mobile) {
+  @include breakpoint(until-tablet) {
     width: 346px;
     height: 346px;
     bottom: 46px;
@@ -730,5 +730,48 @@
     justify-content: flex-end;
     width: 293px;
     right: 109px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .hero__decorate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 94px;
+    text-align: right;
+  }
+  .hero__text-min {
+    display: none;
+  }
+  .hero__tasty {
+    display: flex;
+    justify-content: flex-end;
+    width: 168px;
+    height: 133px;
+    right: 34px;
+  }
+
+  .hero__text-min {
+    display: block;
+    font: normal 400 8px/1.25em 'DM Sans', sans-serif;
+    letter-spacing: 0.04em;
+    padding-bottom: 13px;
+  }
+
+  .hero__text-min--accent {
+    font: normal 400 28px/1.145em 'Titan One', cursive;
+  }
+
+  .hero__text-min--accent::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero__flex {
+    align-items: flex-start;
+    padding-right: 4.43%;
+    padding-left: 4.43%;
+    overflow: visible;
   }
 }
