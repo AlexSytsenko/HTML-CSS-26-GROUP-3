@@ -529,7 +529,8 @@ img {
 
   opacity: 0.1;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 }
@@ -576,7 +577,8 @@ img {
   opacity: 0;
   transition: 0.4s 0s;
 
-  .switch__box:hover & {
+  .switch__box:hover &,
+  .switch__box:focus & {
     opacity: 1;
     transition: 0.4s 0.3s;
   }
@@ -586,7 +588,8 @@ img {
   opacity: 0;
   transition: 0.4s 0s;
 
-  .switch__box:hover & {
+  .switch__box:hover &,
+  .switch__box:focus & {
     opacity: 1;
     transition: 0.4s 0.3s;
   }

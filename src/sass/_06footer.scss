@@ -253,7 +253,8 @@ $numbers: '1' 'github', '2' 'telegram', '3' 'facebook';
     display: inline-block;
     transition: all 300ms linear;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translatey(-10px);
     }
 
