@@ -318,6 +318,10 @@
   cursor: pointer;
 }
 
+.locations-button-list span {
+  text-align: center;
+}
+
 .button__location--locations {
   margin-bottom: 10px;
   background-color: $btn1-prod-loc;
@@ -332,33 +336,35 @@
     margin-right: 15px;
   }
 
-  &:hover,
-  &:focus {
-    background-color: $btn1-hover;
-  }
-
   transform: scale(0.3) translateX(-120%);
   opacity: 0;
-  transition: all 0.8s ease 0s;
+  transition: all $tt $tf 0s;
 
   &._active {
     transform: scale(1) translateX(0px);
     opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    background-color: $btn1-hover;
   }
 }
 
 .button__location--franchise {
-  &:hover,
-  &:focus {
-    background-color: $btn2-hover;
-  }
-
   transform: scale(0.3) translateX(120%);
   opacity: 0;
-  transition: all 0.8s ease 0s;
+  transition: all $tt $tf 0s;
 
   &._active {
     transform: scale(1) translateX(0px);
     opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    background-color: $btn2-hover;
   }
 }

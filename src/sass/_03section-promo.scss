@@ -574,19 +574,21 @@ img {
 }
 .switch__info-masonry {
   opacity: 0;
-  transition: 0.4s 0.3s;
+  transition: 0.4s 0s;
 
   .switch__box:hover & {
     opacity: 1;
+    transition: 0.4s 0.3s;
   }
 }
 
 .switch__info-flex {
   opacity: 0;
-  transition: 0.4s 0.3s;
+  transition: 0.4s 0s;
 
   .switch__box:hover & {
     opacity: 1;
+    transition: 0.4s 0.3s;
   }
 }
 
