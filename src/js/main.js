@@ -76,7 +76,7 @@ window.onload = () => {
 
 // Скрипт плавного скролла
 
-$('a[href*="#"]').on('click', function (e) {
+$('a[href*="#menu"]').on('click', function (e) {
   e.preventDefault();
 
   const mobileMenuRef = document.querySelector('[data2-menu]');
