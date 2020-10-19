@@ -198,18 +198,15 @@
   }
 }
 
-.hero__order-title--accent._active {
-  // transition: all 300ms linear;
+// .hero__order-title--accent._active {
+//   & span {
+//     transition: all 300ms linear;
+//   }
 
-  & span {
-    transition: all 300ms linear;
-    // transition: all $tt $tf 0s;
-  }
-
-  & span:hover {
-    transform: translateY(-10px);
-  }
-}
+//   & span:hover {
+//     transform: translateY(-10px);
+//   }
+// }
 
 .hero__button {
   font: normal 400 8px/1.25em 'DM Sans', sans-serif;
@@ -867,4 +864,3 @@
     overflow: visible;
   }
 }
-
