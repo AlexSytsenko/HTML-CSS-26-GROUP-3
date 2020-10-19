@@ -1,3 +1,7 @@
+@Oksana Stezhko - помощник тим лида, тройная премия!!! @Vera @Tatyana Strelkova
+@Oleksandr Sytsenko @Aleksei Yarmolenko @Aleksandr Shyviakov @Oleksandr @Райт
+Макс - тим лид.
+
 # parcel-project-template
 
 ## Developing
