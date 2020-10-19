@@ -78,8 +78,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.4);
-    // transform: scale(1.05);
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.5);
   }
 
   @include breakpoint(until-tablet) {
@@ -113,36 +112,46 @@
   &::after {
     content: '';
     position: absolute;
-    top: -500px;
-    left: -50px;
+    top: 0;
+    left: 0;
     width: 5px;
-    height: 200%;
-    background-color: rgba(136, 116, 119, 0.5);
-    filter: blur(60px);
-    transform: skewX(-45deg);
+    height: 150%;
+    background-color: rgba(107, 30, 46, 0.5);
+    filter: blur(50px);
+    transform: translateX(-100px) translateY(-60%) skewX(-45deg);
 
     @include breakpoint(tablet) {
-      top: -400px;
       width: 10px;
       height: 100%;
-      background-color: rgba(136, 116, 119, 0.5);
-      filter: blur(70px);
+      transform: translateX(-50px) translateY(-70%) skewX(-45deg);
+   
     }
   }
 
   &:hover::before,
   &:focus::before {
-    left: 200px;
-    top: 100%;
-    transition: 350ms;
+    transform: translateX(500px) translateY(20%) skewX(-45deg);
+    transition: 300ms;
   }
 
   &:hover::after,
   &:focus::after {
-    left: 200px;
-    top: 100%;
-    transition: 300ms 100ms;
+    transform: translateX(500px) translateY(20%) skewX(-45deg);
+    transition: 300ms 150ms;
   }
+
+  @include breakpoint(tablet) {
+    &:hover::before,
+    &:focus::before {
+      transform: translateX(500px) translateY(50%) skewX(-45deg);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: translateX(500px) translateY(50%) skewX(-45deg);
+    }
+  }
+
 
   transform: scale(0.3) translateY(-120%);
   opacity: 0;
@@ -330,12 +339,6 @@
   &::after {
     color: $polar;
   }
-
-  /*переливание кнопки*/
-
-
-
-
 
   @include breakpoint(tablet) {
     margin-bottom: 0;

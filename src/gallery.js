@@ -1,3 +1,5 @@
+// Переключатель переключает галерею
+
 (() => {
   const mobileGalmenuRef = document.querySelector('[data-gallery]');
   const inputs = document.querySelectorAll('input[type=checkbox]');
@@ -12,6 +14,7 @@
   inputs.forEach(input => input.addEventListener('change', check));
 })();
 
+// Переключатель переключает инфо
 (() => {
   const toggleRef = document.querySelector('[data-toggle]');
   const inputs = document.querySelectorAll('input[type=checkbox]');
