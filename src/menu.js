@@ -12,5 +12,10 @@
     menuBtnRef.getAttribute('aria-expanded', !expanded);
 
     mobileMenuRef.classList.toggle('is-open');
+
+    $('.hero__indented, .products').click(function () {
+      mobileMenuRef.classList.remove('is-open'),
+        menuBtnRef.classList.remove('is-open');
+    });
   });
 })();
