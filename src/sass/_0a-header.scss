@@ -306,3 +306,30 @@
     color: $main;
   }
 }
+
+@include breakpoint(desktop) {
+  .header__burger.is-open + .burger__btn {
+    position: relative;
+    right: 0;
+  }
+
+  .header__button.is-open {
+    display: none;
+    top: 47px;
+    right: 34px;
+  }
+
+  // .header__button {
+  //   display: none;
+  //   top: 47px;
+  //   right: 34px;
+  // }
+
+  // .header__button.is-open .header__button--cross {
+  //   display: none;
+  // }
+
+  // .header__button--cross {
+  //   display: none;
+  // }
+}

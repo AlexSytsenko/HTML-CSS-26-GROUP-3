@@ -555,6 +555,7 @@ img {
 .switch__info {
   &-masonry {
     display: block;
+    color: $ice-coffee;
     animation: crescendo 1s alternate ease 0.1s;
   }
 
