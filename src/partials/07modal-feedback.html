@@ -1,1 +1,83 @@
+ <div class="modal-backdrop is-hidden"  data-modal>
+     <div class="modal-backdrop__modal">
+         <div class="modal-button-close">
+             <!-- <button
+      type="button"
+      class="modal__button-close-icon flexbox"
+      aria-label="open and close menu button"  data-modal-close
+    >
+      <span class="modal__button--cross" aria-hidden="true"></span> -->
+      <!-- <span class="fa fa-bars header__button--menu" aria-hidden="true"></span> -->
 
+           <button type="button" class="modal-button-close__icon-close" data-modal-close>
+                 <svg height="11" width="11">
+                       <use href="./images/sprite_work.svg#icon-menu-close"></use>
+                 </svg>
+             </button> 
+         </div>
+         <!-- форма -->
+         <!-- action - не используется, джс в помощь// action="#" method="post"-->
+         <form id="form" class="modal-form js-speaker-form" autocomplete="on">
+             <h3 class="modal-form__title">Leave your details, we will call you back</h3>
+             <ul  class="modal-form__title modal-form__list"> ADVANTAGES OF COOPERATION WITH US:
+                 <li  class="modal-form__label">A proven, proven concept that makes it easy to start your own business.</li>
+                 <li  class="modal-form__label">Trade in a high quality, unique product.</li>
+                 <li  class="modal-form__label">Mutually beneficial pricing policy of business partners.</li>
+                 <li  class="modal-form__label">Regular delivery of products of our own production.</li>
+                 <li  class="modal-form__label">Fast return on investment.</li>
+             </ul>
+
+             <div class="modal-form__filling">
+                 <label class="modal-form__label--color" for="name">First name*</label>
+                 <div class="modal-form-field modal-form-focus">
+                     <input class="modal-form-field__content" type="text" name="name" id="name" pattern="[A-Za-zА-Яа-яЁё]"
+                         required autofocus />
+                     <!-- <span class="form-field__span">
+              <svg class="form-field__icon" width="12" height="12">
+                <use href="./images/sprite.svg#man"></use>
+              </svg>
+            </span> -->
+                 </div>
+
+                 <label class="modal-form__label--color" for="tel">Phone*</label>
+                 <div class="modal-form-field modal-form-focus">
+                     <input class="modal-form-field__content" type="tel" name="tel" id="tel" pattern="[0-9]{10}" required />
+                     <!-- <span class="form-field__span">
+              <svg class="form-field__icon" width="13" height="13">
+                <use href="./images/sprite.svg#receiver"></use>
+              </svg>
+            </span> -->
+                 </div>
+
+                 <label class="modal-form__label--color" for="email">E-mail*</label>
+                 <div class="modal-form-field modal-form-focus">
+                     <input class="modal-form-field__content" type="email" name="email" id="email" required />
+                     <!-- <span class="form-field__span">
+              <svg class="form-field__icon" width="15" height="12">
+                <use href="./images/sprite.svg#email"></use>
+              </svg>
+            </span> -->
+                 </div>
+
+                 <div class="modal-form-field modal-form-focus">
+                     <label class="modal-form__label--color" for="comment">Question/comment*</label>
+                     <textarea class="modal-form-field__textarea" name="comment" id="comment" rows="8"
+                         placeholder="Enter text"></textarea>
+                 </div>
+             </div>
+
+             <!-- <div class="form-policy">
+          <input type="checkbox" class="form-policy__custom-checkbox" name="policy" id="policy" />
+          .form-field input 
+          <label class="form-policy__custom-checkbox-label" for="policy">
+            Соглашаюсь с рассылкой и принимаю&nbsp;<a href="#">Условия договора</a>
+          </label>
+        </div> -->
+           <div class="modal__button--poz">
+               <button type="submit" class="modal__button">Send</button>
+           </div>
+                 
+           
+         </form>
+     </div>
+ </div>
