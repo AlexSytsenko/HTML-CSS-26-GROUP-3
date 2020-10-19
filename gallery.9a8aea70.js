@@ -118,6 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"gallery.js":[function(require,module,exports) {
+// Переключатель переключает галерею
 (function () {
   var mobileGalmenuRef = document.querySelector('[data-gallery]');
   var inputs = document.querySelectorAll('input[type=checkbox]');
@@ -133,7 +134,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   inputs.forEach(function (input) {
     return input.addEventListener('change', check);
   });
-})();
+})(); // Переключатель переключает инфо
+
 
 (function () {
   var toggleRef = document.querySelector('[data-toggle]');
@@ -179,7 +181,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58723" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63621" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

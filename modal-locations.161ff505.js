@@ -117,10 +117,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"btn.js":[function(require,module,exports) {
-document.querySelector('.header__button').addEventListener('mousedown', function (e) {
-  return e.preventDefault();
-});
+})({"modal-locations.js":[function(require,module,exports) {
+(function () {
+  var refs = {
+    openModalBtn: document.querySelector("[locations-data-modal-open]"),
+    closeModalBtn: document.querySelector("[locations-data-modal-close]"),
+    modal: document.querySelector("[locations-data-modal]")
+  };
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    document.body.classList.toggle("locations-modal-open");
+    refs.modal.classList.toggle("is-hidden");
+  }
+})();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -325,5 +336,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","btn.js"], null)
-//# sourceMappingURL=/btn.d6caa1d0.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","modal-locations.js"], null)
+//# sourceMappingURL=/modal-locations.161ff505.js.map
