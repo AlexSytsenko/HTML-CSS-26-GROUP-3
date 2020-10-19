@@ -80,6 +80,15 @@
   text-transform: uppercase;
   margin-bottom: 19px;
 
+  transform: scale(0.3) translateY(-220%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+
   @include breakpoint(tablet-to-desktop) {
     font: normal 400 22px/1.14em 'Titan One', cursive;
     margin-bottom: 20px;
@@ -96,6 +105,80 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $main;
+
+  & span:nth-child(1) {
+    transform: scale(0.3) translateY(-220%);
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+  }
+
+  &._active span:nth-child(1) {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+
+  & span:nth-child(2) {
+    transform: scale(0.3) translateY(-220%);
+    opacity: 0;
+    transition: all 0.8s ease 0.7s;
+  }
+
+  &._active span:nth-child(2) {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+
+  & span:nth-child(3) {
+    transform: scale(0.3) translateY(-220%);
+    opacity: 0;
+    transition: all 0.8s ease 0.8s;
+  }
+
+  &._active span:nth-child(3) {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+
+  & span:nth-child(4) {
+    transform: scale(0.3) translateY(-220%);
+    opacity: 0;
+    transition: all 0.8s ease 0.9s;
+  }
+
+  &._active span:nth-child(4) {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+  & span:nth-child(5) {
+    transform: scale(0.3) translateY(-220%);
+    opacity: 0;
+    transition: all 0.8s ease 1s;
+  }
+
+  &._active span:nth-child(5) {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+  & span:nth-child(6) {
+    transform: scale(0.3) translateY(-220%);
+    opacity: 0;
+    transition: all 0.8s ease 1.1s;
+  }
+
+  &._active span:nth-child(6) {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+  & span:nth-child(7) {
+    transform: scale(0.3) translateY(-220%);
+    opacity: 0;
+    transition: all 0.8s ease 1.2s;
+  }
+
+  &._active span:nth-child(7) {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
 
   @include breakpoint(tablet-to-desktop) {
     font: normal 400 34px/0.905em 'Titan One', cursive;
@@ -115,8 +198,17 @@
   }
 }
 
-.hero__order-title--accent span:hover {
-  transform: translateY(-10px);
+.hero__order-title--accent._active {
+  // transition: all 300ms linear;
+
+  & span {
+    transition: all 300ms linear;
+    // transition: all $tt $tf 0s;
+  }
+
+  & span:hover {
+    transform: translateY(-10px);
+  }
 }
 
 .hero__button {
