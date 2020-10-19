@@ -1,7 +1,16 @@
-@Aleksei Yarmolenko - хедер @Vera - герой @Oleksandr - первая секция @Tatyana
-Strelkova - вторая секция @Aleksandr Shyviakov - третья секция @Oksana Stezhko -
-помощник тим лида, тройная премия!!! - четвертая секция @Oleksandr Sytsenko -
-пятая секция
+@Aleksei Yarmolenko - хедер
+
+@Vera - герой
+
+@Oleksandr - первая секция
+
+@Tatyana Strelkova - вторая секция
+
+@Aleksandr Shyviakov - третья секция
+
+@Oksana Stezhko - помощник тим лида, тройная премия!!! - четвертая секция
+
+@Oleksandr Sytsenko - пятая секция
 
 @Райт Макс - тим лид, футер и все остальное.
 
