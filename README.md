@@ -1,6 +1,9 @@
-@Oksana Stezhko - помощник тим лида, тройная премия!!! @Vera @Tatyana Strelkova
-@Oleksandr Sytsenko @Aleksei Yarmolenko @Aleksandr Shyviakov @Oleksandr @Райт
-Макс - тим лид.
+@Aleksei Yarmolenko - хедер @Vera - герой @Oleksandr - первая секция @Tatyana
+Strelkova - вторая секция @Aleksandr Shyviakov - третья секция @Oksana Stezhko -
+помощник тим лида, тройная премия!!! - четвертая секция @Oleksandr Sytsenko -
+пятая секция
+
+@Райт Макс - тим лид, футер и все остальное.
 
 # parcel-project-template
 
