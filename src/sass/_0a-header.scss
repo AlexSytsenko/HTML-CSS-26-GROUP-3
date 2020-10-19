@@ -40,7 +40,32 @@
   }
 }
 
+.logo__circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $main;
+}
+
+.logo__icon {
+  fill: $polar;
+}
+
+.logo__text {
+  // display: inline-block;
+font-family: 'Titan One';
+text-transform: uppercase;
+font-size: 25px;
+color: $main;
+}
+
 .logo {
+  display: flex;
+  align-items: center;
   margin-right: 40px;
   @include breakpoint(desktop) {
     margin-right: 110px;
