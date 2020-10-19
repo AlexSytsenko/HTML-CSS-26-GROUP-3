@@ -43,8 +43,10 @@
   }
 
   @include breakpoint(desktop) {
+    max-width: 1600px;
+    margin: 0 auto;
     align-items: flex-start;
-    padding-right: 8.52%;
+   // padding-right: 8.52%;
     padding-left: 6%;
     overflow: visible;
   }
