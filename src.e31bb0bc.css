@@ -3023,7 +3023,7 @@ input:checked + .switch__slider:before {
 }
 
 .locations-backdrop.is-hidden .locations-modal {
-  transform: translate(-50%, -50%) scale(0.7);
+  margin-left: calc(95vw - 100%);
 }
 
 .locations-modal {
@@ -3049,24 +3049,23 @@ input:checked + .switch__slider:before {
 }
 
 .locations-button-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
   width: 30px;
   height: 30px;
-  margin-left: auto;
-  padding: 6px;
-  --color1: #000;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background: #d41443;
+  border: 0px solid rgba(0, 0, 0, 0.1);
   transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .locations-button-close:hover {
   --color1: #ffa5ba;
   transform: scale(1.1);
-  border: 1px solid #ffa5ba;
 }
 
 .locations-modal__label {
@@ -3117,6 +3116,11 @@ input:checked + .switch__slider:before {
 }
 .locations-modal__link:hover, .locations-modal__link:focus {
   background-color: #c7133e;
+}
+
+body.locations-modal-open {
+  overflow-y: hidden;
+  padding-right: 1%;
 }
 
 .footer {
@@ -3435,9 +3439,10 @@ input:checked + .switch__slider:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffb8ca;
-  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
   overflow: auto;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-backdrop__modal {
   position: absolute;
@@ -3445,7 +3450,6 @@ input:checked + .switch__slider:before {
   left: 50%;
   transform: translateX(-50%) scale(1);
   width: calc(100% - 80px);
-  transition: all 700ms;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -3470,7 +3474,6 @@ input:checked + .switch__slider:before {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: 300ms linear 700ms;
 }
 
 .modal-form {
@@ -3564,22 +3567,49 @@ input:checked + .switch__slider:before {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.fr__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #ffffff;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  font-size: 20px;
+}
+
 .modal-button-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   position: absolute;
   top: 8px;
   right: 8px;
 }
 .modal-button-close__icon-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background: #d41443;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button-close__icon-close:hover, .modal-button-close__icon-close:focus {
-  background: #d41443;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  outline: 1px rgba(0, 0, 0, 0.1);
+  --color1: #ffa5ba;
+  transform: scale(1.1);
+  background: #c7133e;
+  transform: scale(1.1);
+  color: #d41443;
 }
 
 .modal__button {
