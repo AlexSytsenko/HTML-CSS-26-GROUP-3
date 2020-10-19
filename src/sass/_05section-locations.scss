@@ -399,6 +399,7 @@
 
 .locations-backdrop.is-hidden .locations-modal {
   transform: translate(-50%, -50%) scale(0.7);
+  margin-left: calc(95vw - 100%);
 }
 
 .locations-modal {
@@ -485,3 +486,24 @@
     background-color: $btn1-hover;
   }
 }
+
+body.locations-modal-open {
+  overflow-y: hidden;
+  padding-right: 1%;
+
+  // animation: boom 1s alternate ease 0s;
+}
+
+// @keyframes boom {
+//   0% {
+//     transform: scale(0.9);
+//   }
+
+//   50% {
+//     transform: scale(1.1);
+//   }
+
+//   100% {
+//     transform: scale(1);
+//   }
+// }
