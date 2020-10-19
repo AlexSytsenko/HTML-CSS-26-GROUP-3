@@ -85,24 +85,29 @@
   }
 }
 
-.promo__item::before {
-  display: block;
-  content: '';
-  height: 50px;
+.promo__icon {
+  fill: $sub-title;
 
-  background-repeat: no-repeat;
-  background-position: left;
 }
 
-.promo__icon:nth-child(1)::before {
-  background-image: url(../images/svg_icon/icon1.svg);
-}
-.promo__icon:nth-child(2)::before {
-  background-image: url(../images/svg_icon/icon2.svg);
-}
-.promo__icon:nth-child(3)::before {
-  background-image: url(../images/svg_icon/icon3.svg);
-}
+// .promo__item::before {
+//   display: block;
+//   content: '';
+//   height: 50px;
+
+//   background-repeat: no-repeat;
+//   background-position: left;
+// }
+
+// .promo__icon:nth-child(1)::before {
+//   background-image: url(../images/icons/milk-tank.svg);
+// }
+// .promo__icon:nth-child(2)::before {
+//   background-image: url(../images/icons/apple-juice.svg);
+// }
+// .promo__icon:nth-child(3)::before {
+//   background-image: url(../images/icons/ice-cream.svg);
+// }
 
 .promo__title {
   @include font(36px, 1.86);
