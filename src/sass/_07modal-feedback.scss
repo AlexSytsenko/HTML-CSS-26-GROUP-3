@@ -8,7 +8,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   overflow: auto;
-
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &__modal {
     position: absolute;
     top: 10%;
@@ -16,7 +16,7 @@
     transform: translateX(-50%) scale(1);
     width: calc(100% - 80px);
 
-    transition: all 700ms;
+    // transition: all 700ms;
     background-color: $polar;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -40,7 +40,8 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: 300ms linear 700ms;
+  //   transform: translate(-50%, -50%) scale(0.7);
+  //   transition: 300ms linear 700ms;
 }
 
 .modal-form {
@@ -155,27 +156,54 @@
 //     font-size: 24px;
 // }
 
+.fr__icon {
+  @include flexbox;
+  color: $polar;
+  height: 1em;
+  width: 1em;
+
+  text-align: center;
+  font-size: 20px;
+
+  //   transition: transform 250ms $tf;
+  //   .modal-button-close__icon-close:hover & {
+  //     transform: scale(1.1);
+  //   }
+}
+
 .modal-button-close {
+  @include flexbox;
   position: absolute;
   top: 8px;
   right: 8px;
 
   &__icon-close {
+    @include flexbox;
+    position: absolute;
+    top: 8px;
+    right: 8px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background: $main;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 0px solid rgba(0, 0, 0, 0.1);
     //  --color1: $btn1-hover;
+    transform: scale(1);
+    transition: transform 250ms $tf;
   }
 
   &__icon-close:hover,
   &__icon-close:focus {
-    background: $main;
+    --color1: #ffa5ba;
+    transform: scale(1.1);
+    background: $btn1-hover;
+    transform: scale(1.1);
+    color: $main;
+
     //--color1: $btn2-hover;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    outline: 1px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    //   0px 2px 1px rgba(0, 0, 0, 0.2);
+    // outline: 1px rgba(0, 0, 0, 0.1);
   }
 }
 .modal__button {

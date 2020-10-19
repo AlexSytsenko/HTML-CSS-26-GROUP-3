@@ -398,7 +398,7 @@
 }
 
 .locations-backdrop.is-hidden .locations-modal {
-  transform: translate(-50%, -50%) scale(0.7);
+  // transform: translate(-50%, -50%) scale(0.7);
   margin-left: calc(95vw - 100%);
 }
 
@@ -426,24 +426,33 @@
 }
 
 .locations-button-close {
+  @include flexbox;
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
   width: 30px;
   height: 30px;
-  margin-left: auto;
-  padding: 6px;
-  --color1: #000;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: $polar;
+  background: $main;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  // position: absolute;
+  // top: 8px;
+  // right: 8px;
+  // display: flex;
+  // width: 30px;
+  // height: 30px;
+  // margin-left: auto;
+  // padding: 6px;
+  // --color1: #000;
+  // border-radius: 50%;
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+  // background-color: $polar;
   transition: $tt $tf;
 
   &:hover {
     --color1: #ffa5ba;
     transform: scale(1.1);
-    border: 1px solid $sub-title;
+    // border: 1px solid $sub-title;
   }
 }
 
